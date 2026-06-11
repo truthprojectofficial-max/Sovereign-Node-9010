@@ -1,0 +1,103 @@
+2026-05-31 00:20:51 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\02_Technical\data\logs\sovereign_node_20260531.log
+2026-05-31 00:20:51 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-31 00:20:51 | INFO     | SovereignNodeServer | Logging initialized → C:\project\sovereignnode9010\02_Technical\data\logs\sovereign_node_20260531.log
+2026-05-31 00:21:01 | INFO     | SovereignNodeServer | [2026-05-31T00:21:01.618556] GET / HTTP/1.1
+2026-05-31 00:21:01 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:01.642799+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:01 | INFO     | SovereignNodeServer | [SOVEREIGN_NODE_9010_v3.9.1] GrokNetCore initialized (deterministic mode, black_box=False)
+2026-05-31 00:21:01 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:01.644799+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:01 | INFO     | SovereignNodeServer | [2026-05-31T00:21:01.644799] GET /api/health HTTP/1.1
+2026-05-31 00:21:01 | INFO     | SovereignNodeServer | [2026-05-31T00:21:01.879785] GET /favicon.ico HTTP/1.1
+2026-05-31 00:21:05 | INFO     | SovereignNodeServer | [2026-05-31T00:21:05.975883] GET /dashboard HTTP/1.1
+2026-05-31 00:21:06 | INFO     | SovereignNodeServer | [2026-05-31T00:21:06.249277] GET /api/facts HTTP/1.1
+2026-05-31 00:21:06 | INFO     | SovereignNodeServer | [2026-05-31T00:21:06.377499] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:06 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:06.378753+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:06 | INFO     | SovereignNodeServer | [2026-05-31T00:21:06.380242] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:06 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:06.380974+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:06 | INFO     | SovereignNodeServer | [2026-05-31T00:21:06.382678] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:07 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:07.593417+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:07 | INFO     | SovereignNodeServer | [2026-05-31T00:21:07.593875] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:13 | INFO     | SovereignNodeServer | [2026-05-31T00:21:13.080013] GET /api/facts HTTP/1.1
+2026-05-31 00:21:13 | INFO     | SovereignNodeServer | [2026-05-31T00:21:13.399441] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:13 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:13.727205+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:13 | INFO     | SovereignNodeServer | [2026-05-31T00:21:13.729207] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:18 | INFO     | SovereignNodeServer | [2026-05-31T00:21:18.740600] POST /api/validate HTTP/1.1
+2026-05-31 00:21:20 | INFO     | SovereignNodeServer | [2026-05-31T00:21:20.391072] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:20 | INFO     | SovereignNodeServer | [2026-05-31T00:21:20.393079] GET /api/facts HTTP/1.1
+2026-05-31 00:21:20 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:20.661398+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:20 | INFO     | SovereignNodeServer | [2026-05-31T00:21:20.662398] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:22 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:22.087884+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:22 | INFO     | SovereignNodeServer | [2026-05-31T00:21:22.087884] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:27 | INFO     | SovereignNodeServer | [2026-05-31T00:21:27.394249] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:27 | INFO     | SovereignNodeServer | [2026-05-31T00:21:27.395250] GET /api/facts HTTP/1.1
+2026-05-31 00:21:27 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:27.658026+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:27 | INFO     | SovereignNodeServer | [2026-05-31T00:21:27.659769] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:34 | INFO     | SovereignNodeServer | [2026-05-31T00:21:34.087663] GET /api/facts HTTP/1.1
+2026-05-31 00:21:34 | INFO     | SovereignNodeServer | [2026-05-31T00:21:34.392068] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:34 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:34.702510+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:34 | INFO     | SovereignNodeServer | [2026-05-31T00:21:34.704512] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:38 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:38.084207+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:38 | INFO     | SovereignNodeServer | [2026-05-31T00:21:38.084207] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:41 | INFO     | SovereignNodeServer | [2026-05-31T00:21:41.389762] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:41 | INFO     | SovereignNodeServer | [2026-05-31T00:21:41.389762] GET /api/facts HTTP/1.1
+2026-05-31 00:21:41 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:41.655482+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:41 | INFO     | SovereignNodeServer | [2026-05-31T00:21:41.655482] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:41 | INFO     | SovereignNodeServer | [2026-05-31T00:21:41.712971] POST /api/validate HTTP/1.1
+2026-05-31 00:21:48 | INFO     | SovereignNodeServer | [2026-05-31T00:21:48.403015] GET /api/facts HTTP/1.1
+2026-05-31 00:21:48 | INFO     | SovereignNodeServer | [2026-05-31T00:21:48.403015] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:48 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:48.656435+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:48 | INFO     | SovereignNodeServer | [2026-05-31T00:21:48.656435] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:54 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:54.091189+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:54 | INFO     | SovereignNodeServer | [2026-05-31T00:21:54.091189] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:21:55 | INFO     | SovereignNodeServer | [2026-05-31T00:21:55.390003] GET /api/affidavits HTTP/1.1
+2026-05-31 00:21:55 | INFO     | SovereignNodeServer | [2026-05-31T00:21:55.392004] GET /api/facts HTTP/1.1
+2026-05-31 00:21:55 | INFO     | GrokNetCoreV391 | [2026-05-30 14:51:55.646664+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:21:55 | INFO     | SovereignNodeServer | [2026-05-31T00:21:55.646664] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:02 | INFO     | SovereignNodeServer | [2026-05-31T00:22:02.074469] GET /api/facts HTTP/1.1
+2026-05-31 00:22:02 | INFO     | SovereignNodeServer | [2026-05-31T00:22:02.386785] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:02 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:02.704026+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:02 | INFO     | SovereignNodeServer | [2026-05-31T00:22:02.706028] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:09 | INFO     | SovereignNodeServer | [2026-05-31T00:22:09.076014] GET /api/facts HTTP/1.1
+2026-05-31 00:22:09 | INFO     | SovereignNodeServer | [2026-05-31T00:22:09.397038] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:09 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:09.712024+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:09 | INFO     | SovereignNodeServer | [2026-05-31T00:22:09.712024] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:10 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:10.072556+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:10 | INFO     | SovereignNodeServer | [2026-05-31T00:22:10.072556] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:16 | INFO     | SovereignNodeServer | [2026-05-31T00:22:16.393195] GET /api/facts HTTP/1.1
+2026-05-31 00:22:16 | INFO     | SovereignNodeServer | [2026-05-31T00:22:16.393622] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:16 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:16.642125+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:16 | INFO     | SovereignNodeServer | [2026-05-31T00:22:16.642125] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:23 | INFO     | SovereignNodeServer | [2026-05-31T00:22:23.094868] GET /api/facts HTTP/1.1
+2026-05-31 00:22:23 | INFO     | SovereignNodeServer | [2026-05-31T00:22:23.394855] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:23 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:23.719083+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:23 | INFO     | SovereignNodeServer | [2026-05-31T00:22:23.719083] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:26 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:26.078921+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:26 | INFO     | SovereignNodeServer | [2026-05-31T00:22:26.078921] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:30 | INFO     | SovereignNodeServer | [2026-05-31T00:22:30.410355] GET /api/facts HTTP/1.1
+2026-05-31 00:22:30 | INFO     | SovereignNodeServer | [2026-05-31T00:22:30.412364] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:30 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:30.672774+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:30 | INFO     | SovereignNodeServer | [2026-05-31T00:22:30.672774] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:37 | INFO     | SovereignNodeServer | [2026-05-31T00:22:37.078241] GET /api/facts HTTP/1.1
+2026-05-31 00:22:37 | INFO     | SovereignNodeServer | [2026-05-31T00:22:37.383830] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:37 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:37.695463+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:37 | INFO     | SovereignNodeServer | [2026-05-31T00:22:37.695463] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:42 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:42.079521+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:42 | INFO     | SovereignNodeServer | [2026-05-31T00:22:42.079521] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:44 | INFO     | SovereignNodeServer | [2026-05-31T00:22:44.402483] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:44 | INFO     | SovereignNodeServer | [2026-05-31T00:22:44.404515] GET /api/facts HTTP/1.1
+2026-05-31 00:22:44 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:44.654904+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:44 | INFO     | SovereignNodeServer | [2026-05-31T00:22:44.654904] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:51 | INFO     | SovereignNodeServer | [2026-05-31T00:22:51.083853] GET /api/facts HTTP/1.1
+2026-05-31 00:22:51 | INFO     | SovereignNodeServer | [2026-05-31T00:22:51.393482] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:51 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:51.703445+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:51 | INFO     | SovereignNodeServer | [2026-05-31T00:22:51.703445] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:58 | INFO     | SovereignNodeServer | [2026-05-31T00:22:58.087068] GET /api/facts HTTP/1.1
+2026-05-31 00:22:58 | INFO     | SovereignNodeServer | [2026-05-31T00:22:58.387914] GET /api/affidavits HTTP/1.1
+2026-05-31 00:22:58 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:58.387914+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:58 | INFO     | SovereignNodeServer | [2026-05-31T00:22:58.391009] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:22:58 | INFO     | GrokNetCoreV391 | [2026-05-30 14:52:58.704058+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:22:58 | INFO     | SovereignNodeServer | [2026-05-31T00:22:58.704058] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:23:05 | INFO     | SovereignNodeServer | [2026-05-31T00:23:05.074397] GET /api/facts HTTP/1.1
+2026-05-31 00:23:05 | INFO     | SovereignNodeServer | [2026-05-31T00:23:05.393623] GET /api/affidavits HTTP/1.1
+2026-05-31 00:23:05 | INFO     | GrokNetCoreV391 | [2026-05-30 14:53:05.703502+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-31 00:23:05 | INFO     | SovereignNodeServer | [2026-05-31T00:23:05.705508] GET /api/devsecops/tau HTTP/1.1
+2026-05-31 00:23:12 | INFO     | GrokNetCoreV391 | [2026-05-30 14:53:12.084585+00:00] Sovereign Node 9010 v3.9.1 shutdown. All state persisted.

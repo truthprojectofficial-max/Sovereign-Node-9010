@@ -1,0 +1,36 @@
+version: 2
+updates:
+  # npm dependencies
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 10
+    reviewers:
+      - "beendaer"
+    labels:
+      - "dependencies"
+    groups:
+      # Group trivial dev-tool updates together
+      dev-tools:
+        patterns:
+          - "@types/*"
+          - "globals"
+          - "prettier"
+          - "c8"
+        update-types:
+          - "minor"
+          - "patch"
+
+  # GitHub Actions versions
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    open-pull-requests-limit: 5
+    reviewers:
+      - "beendaer"
+    labels:
+      - "ci"

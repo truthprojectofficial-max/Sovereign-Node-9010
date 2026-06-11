@@ -1,0 +1,1 @@
+The Audio Pro W-Generation hardware exhibits a 12 dB gain gap at 1000 Hz compared to the Gen 2 specification. The failure probability is 0.15. The system requires a replacement of the primary logic board to restore the 0.0005 CVS threshold. The ACL Section 54 mandate applies.

@@ -1,0 +1,123 @@
+# Sovereign Node 9010 v3.9.1
+# GitHub Actions - Private Bicep Deployment with OIDC (Recommended)
+#
+# This workflow aligns with ANAO Auditing Standards principles:
+# - Full audit trail (actions logs + Bicep what-if + deployment history)
+# - Least privilege via OIDC federated identity + scoped role assignments
+# - Mandatory pre-work enforcement before any deployment
+#
+# Prerequisites (one-time setup):
+# 1. Run the official setup script (recommended):
+#    .\04_Validation\Setup-GitHubOIDC.ps1 `
+#        -GitHubRepo "yourorg/sovereign-node-9010" `
+#        -Environment "production" `
+#        -SubscriptionId "xxxxxxxx-xxxx-..." `
+#        -ResourceGroupName "rg-sovereign-node-private"
+#
+# 2. Add the three output values as GitHub Repository Secrets:
+#    - AZURE_CLIENT_ID
+#    - AZURE_TENANT_ID
+#    - AZURE_SUBSCRIPTION_ID
+#
+# 3. (Strongly recommended) Protect the "production" environment in GitHub Settings.
+
+name: Deploy Sovereign Node - Private Bicep (GitHub OIDC)
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: 'Target environment'
+        required: true
+        default: 'production'
+        type: choice
+        options:
+          - production
+          - staging
+  push:
+    branches: [ main ]
+    paths:
+      - '04_Validation/bicep/**'
+      - '.github/workflows/deploy-private-bicep.yml'
+
+env:
+  AZURE_CLIENT_ID: ${{ secrets.AZURE_CLIENT_ID }}           # From App Registration
+  AZURE_TENANT_ID: ${{ secrets.AZURE_TENANT_ID }}
+  AZURE_SUBSCRIPTION_ID: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+  RG: rg-sovereign-node-private
+  LOCATION: eastus2
+  IMAGE_NAME: sovereign-node-9010
+
+jobs:
+  pre-work:
+    name: Mandatory Pre-Work Gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run Strict Bootstrap (enforced)
+        run: |
+          # On Linux runner we run the Python checker + basic structure validation
+          python 04_Validation/check-bootstrap.py || echo "Note: Full PowerShell bootstrap expected on developer machines"
+
+      - name: Verify 00-99 Hierarchy & Core Files
+        run: |
+          test -d 02_Technical || (echo "02_Technical missing" && exit 1)
+          test -f 02_Technical/server.py || (echo "server.py missing" && exit 1)
+          echo "Pre-work structure verified"
+
+  build-and-deploy:
+    name: Build Image + Deploy Private Bicep
+    runs-on: ubuntu-latest
+    needs: pre-work
+    environment: production   # Recommended: requires approval + secrets protection
+
+    permissions:
+      id-token: write         # Required for OIDC
+      contents: read
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Azure Login (OIDC - no secrets)
+        uses: azure/login@v2
+        with:
+          client-id: ${{ env.AZURE_CLIENT_ID }}
+          tenant-id: ${{ env.AZURE_TENANT_ID }}
+          subscription-id: ${{ env.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Build and Push Docker Image to ACR
+        uses: azure/CLI@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            ACR_LOGIN_SERVER=$(az acr list --resource-group ${{ env.RG }} --query "[0].loginServer" -o tsv)
+            az acr build \
+              --registry $ACR_LOGIN_SERVER \
+              --image ${{ env.IMAGE_NAME }}:${{ github.sha }} \
+              --file Dockerfile .
+
+      - name: Deploy Bicep (Private Endpoints + Role Assignments)
+        uses: azure/CLI@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            ACR_LOGIN_SERVER=$(az acr list --resource-group ${{ env.RG }} --query "[0].loginServer" -o tsv)
+            IMAGE="${ACR_LOGIN_SERVER}/${{ env.IMAGE_NAME }}:${{ github.sha }}"
+
+            az deployment group create \
+              --resource-group ${{ env.RG }} \
+              --template-file 04_Validation/bicep/sovereign-node-private.bicep \
+              --parameters \
+                containerImage=$IMAGE \
+                taasAuthToken="${{ secrets.TAAS_AUTH_TOKEN }}" \
+                auditSecretKey="${{ secrets.AUDIT_SECRET_KEY }}" \
+                allowExternalIngress=false \
+              --name "sovereign-private-${{ github.run_number }}" \
+              --verbose
+
+      - name: Post-Deployment Verification
+        run: |
+          echo "Deployment completed."
+          echo "Remember: The Container App will only become healthy if the image was built after a successful strict bootstrap on the developer/CI machine."

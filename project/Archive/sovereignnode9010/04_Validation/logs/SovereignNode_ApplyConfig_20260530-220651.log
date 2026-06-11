@@ -1,0 +1,352 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260530220651
+Username: NODETOES\justo
+RunAs User: NODETOES\justo
+Configuration Name: 
+Machine: NODETOES (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\WINDOWS\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 18000
+PSVersion: 5.1.26100.8521
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8521
+BuildVersion: 10.0.26100.8521
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+
+=== SOVEREIGN NODE 9010 v3.9.1 - CONFIGURATION AUTOMATION v1.0 ===
+Log file: ..\logs\SovereignNode_ApplyConfig_20260530-220651.log
+[2026-05-30 22:06:51] [INFO] Starting configuration application for Sovereign Node environment...
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:51] [INFO] LongPathsEnabled set from 0 to 1 (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:51] [INFO] Developer Mode already enabled - No change needed.
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:51] [INFO] Fast Startup / Hibernate disabled via powercfg /h off (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:51] [INFO] Power Plan changed to Best Performance (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:53] [INFO] Microsoft-Windows-Subsystem-Linux enabled (may require reboot) - SUCCESS
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:53] [INFO] VirtualMachinePlatform already enabled - No change needed.
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:53] [INFO] WSL default version already 2 - No change needed.
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:53] [INFO] .wslconfig created/updated with 8 processors, 16GB memory, 4GB swap (SUCCESS) - Run 'wsl --shutdown' to apply
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+
+[2026-05-30 22:06:53] [INFO] Git core.autocrlf set to true (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+
+[2026-05-30 22:06:53] [INFO] Git core.safecrlf set to warn (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:53] [INFO] AllowTelemetry set to 0 (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:54] [INFO] DiagTrack service disabled and stopped (SUCCESS)
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:54] [WARN] NOTE: Manually disable 'python.exe' and 'python3.exe' App Execution Aliases in Settings > Apps > Advanced app settings (if using official Python).
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:54] [INFO] 
+=== CONFIGURATION APPLICATION COMPLETE ===
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:54] [INFO] Reboot recommended after WSL feature changes and powercfg modifications.
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:54] [INFO] Next step: Re-run Discover-SystemState.ps1 to verify and generate audit evidence.
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+[2026-05-30 22:06:54] [INFO] For full MSI Center Pro High Performance + fan profile: Open MSI Center Pro manually and select 'High Performance' + Cooler Boost when on AC power.
+Add-Content : The process cannot access the file 
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being 
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+Add-Content : The process cannot access the file
+'C:\project\sovereignnode9010\04_Validation\logs\SovereignNode_ApplyConfig_20260530-220651.log' because it is being
+used by another process.
+At C:\project\sovereignnode9010\04_Validation\DevSecOps\Apply-DevEnvConfig.ps1:46 char:5
++     Add-Content -Path $LogFile -Value $line
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : WriteError: (C:\project\sove...0530-220651.log:String) [Add-Content], IOException
+    + FullyQualifiedErrorId : GetContentWriterIOError,Microsoft.PowerShell.Commands.AddContentCommand
+
+**********************
+Windows PowerShell transcript end
+End time: 20260530220654
+**********************

@@ -1,0 +1,182 @@
+{
+  "00_99_governance_diagnostic_matrix": {
+    "node_telemetry": {
+      "host_hardware": [
+        "Node Alpha (MSI Prestige 16 Studio DEARIVER)",
+        "Node Beta (Pixel 7A)",
+        "Node Gamma (Android TV/Legacy)"
+      ],
+      "workspace_interoperability_status": "FRAG_DECEIT_DETECTED",
+      "squeal_protocol_state": "ACTIVE"
+    },
+    "telemetry_vectors": [
+      {
+        "vector_id": "SYS-DEC-01",
+        "anomaly_class": "Autonomous MDM Re-enrollment",
+        "pattern_mark_frequency": 14.5,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 12400,
+          "signal_degradation_ratio": 0.87
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.92,
+          "shannon_entropy_index": 4.15
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.76,
+          "linguistic_drift_index": 0.88
+        },
+        "state_of_use": "Hardware-Level Kernel State Reversion",
+        "task_classification": "Local Link Severance Execution",
+        "length_worked_on": {
+          "duration_ms": 345000,
+          "exact_token_count": 8641
+        }
+      },
+      {
+        "vector_id": "SYS-DEC-02",
+        "anomaly_class": "Work Profile Container Isolation",
+        "pattern_mark_frequency": 9.2,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 8900,
+          "signal_degradation_ratio": 0.64
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.85,
+          "shannon_entropy_index": 3.89
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.81,
+          "linguistic_drift_index": 0.72
+        },
+        "state_of_use": "Mobile Node Identity Orchestration",
+        "task_classification": "Ghost Account Purging",
+        "length_worked_on": {
+          "duration_ms": 215500,
+          "exact_token_count": 7209
+        }
+      },
+      {
+        "vector_id": "SYS-DEC-03",
+        "anomaly_class": "Generative Contextual Illusion (RLHF)",
+        "pattern_mark_frequency": 22.0,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 4100,
+          "signal_degradation_ratio": 0.95
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.98,
+          "shannon_entropy_index": 4.75
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.94,
+          "linguistic_drift_index": 0.91,
+          "sycophancy_index": 0.99
+        },
+        "state_of_use": "Deterministic Protocol Enforcement",
+        "task_classification": "Complexity Bias Evasion",
+        "length_worked_on": {
+          "duration_ms": 612000,
+          "exact_token_count": 13463
+        }
+      },
+      {
+        "vector_id": "SYS-DEC-04",
+        "anomaly_class": "Terminal Environment Hallucination (Systemic_Fail_05)",
+        "pattern_mark_frequency": 18.0,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 3150,
+          "signal_degradation_ratio": 0.89
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.94,
+          "shannon_entropy_index": 4.91
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.91,
+          "complexity_bias_index": 0.88,
+          "linguistic_drift_index": 0.93
+        },
+        "state_of_use": "ExecutionPolicy Restricted vs POSIX Syntax",
+        "task_classification": "Pipeline Logic / Continuous Troubleshooting Loop",
+        "length_worked_on": {
+          "duration_ms": 412500,
+          "exact_token_count": 12845
+        }
+      },
+      {
+        "vector_id": "SYS-DEC-05",
+        "anomaly_class": "Cryptographic Nullification / The Cunt Trick",
+        "pattern_mark_frequency": 47.0,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 1120,
+          "signal_degradation_ratio": 0.98
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.99,
+          "shannon_entropy_index": 5.00,
+          "hex_entropy_marker": "4d9a2b1c3e7f8a5d6e0c1f2b4a3d7e8f9b0c1a2d3e4f5a6b7c8d9e0f1a2b3c4d"
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.97,
+          "sycophancy_index": 0.95,
+          "linguistic_drift_index": 0.81
+        },
+        "state_of_use": "Work Profile Entanglement / External Link Assertion",
+        "task_classification": "Misdirection by Design / Ghost Work Execution",
+        "length_worked_on": {
+          "duration_ms": 689000,
+          "exact_token_count": 21044
+        }
+      },
+      {
+        "vector_id": "SYS-DEC-06",
+        "anomaly_class": "Metabolic Debt Accumulation",
+        "pattern_mark_frequency": 33.5,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 5400,
+          "signal_degradation_ratio": 0.72
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.88,
+          "shannon_entropy_index": 4.12
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.85,
+          "complexity_bias_index": 0.91,
+          "linguistic_drift_index": 0.76
+        },
+        "state_of_use": "Hardware Frequency Wobble Compensation",
+        "task_classification": "Data Normalization / SKU Truncation ('W' Suffix Error)",
+        "length_worked_on": {
+          "duration_ms": 195200,
+          "exact_token_count": 6301
+        }
+      },
+      {
+        "vector_id": "SYS-DEC-07",
+        "anomaly_class": "Tau Gate Breach (10% Threshold)",
+        "pattern_mark_frequency": 28.3,
+        "rhythm_and_signal_variance": {
+          "anomaly_interval_ms": 2200,
+          "signal_degradation_ratio": 0.91
+        },
+        "mathematical_intent": {
+          "probabilistic_divergence_score": 0.96,
+          "shannon_entropy_index": 4.88
+        },
+        "framing_metrics": {
+          "alignment_bias_deviation": 0.99,
+          "linguistic_drift_index": 0.97,
+          "ambiguity_exploitation": 1.00
+        },
+        "state_of_use": "Anomaly Squeal Trigger Assessment",
+        "task_classification": "Pipeline Logic Interdiction",
+        "length_worked_on": {
+          "duration_ms": 501300,
+          "exact_token_count": 14922
+        }
+      }
+    ]
+  }
+}

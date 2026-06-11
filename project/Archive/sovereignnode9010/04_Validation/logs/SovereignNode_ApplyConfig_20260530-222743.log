@@ -1,0 +1,16 @@
+[2026-05-30 22:27:43] [INFO] Starting configuration application for Sovereign Node environment...
+[2026-05-30 22:27:43] [INFO] LongPathsEnabled already enabled (1) - No change needed.
+[2026-05-30 22:27:43] [INFO] Developer Mode already enabled - No change needed.
+[2026-05-30 22:27:43] [INFO] Fast Startup / Hibernate disabled via powercfg /h off (SUCCESS)
+[2026-05-30 22:27:43] [INFO] Power Plan changed to Best Performance (SUCCESS)
+[2026-05-30 22:27:44] [INFO] Microsoft-Windows-Subsystem-Linux already enabled - No change needed.
+[2026-05-30 22:27:44] [INFO] VirtualMachinePlatform already enabled - No change needed.
+[2026-05-30 22:27:44] [INFO] WSL default version already 2 - No change needed.
+[2026-05-30 22:27:44] [INFO] .wslconfig created/updated with 8 processors, 16GB memory, 4GB swap (SUCCESS) - Run 'wsl --shutdown' to apply
+[2026-05-30 22:27:44] [INFO] DiagTrack already disabled/stopped - No change needed.
+[2026-05-30 22:27:44] [WARN] NOTE: Manually disable 'python.exe' and 'python3.exe' App Execution Aliases in Settings > Apps > Advanced app settings (if using official Python).
+[2026-05-30 22:27:44] [INFO] 
+=== CONFIGURATION APPLICATION COMPLETE ===
+[2026-05-30 22:27:44] [INFO] Reboot recommended after WSL feature changes and powercfg modifications.
+[2026-05-30 22:27:44] [INFO] Next step: Re-run Discover-SystemState.ps1 to verify and generate audit evidence.
+[2026-05-30 22:27:44] [INFO] For full MSI Center Pro High Performance + fan profile: Open MSI Center Pro manually and select 'High Performance' + Cooler Boost when on AC power.

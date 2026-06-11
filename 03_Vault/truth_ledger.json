@@ -1,0 +1,73 @@
+[
+  {
+    "data": {
+      "affidavit_id": "AFF-20260531-144521",
+      "deception_summary": {
+        "char_diversity_ratio": 0.3654,
+        "confidence_score": 0.0,
+        "deception_probability": 0.0,
+        "eight_rule_fired": [],
+        "entropy": 3.957,
+        "entropy_contribution": 0.0,
+        "high_entropy_flag": false,
+        "information_density_note": "WITHIN_EXPECTED_RANGE",
+        "is_deceptive": false,
+        "low_diversity_flag": false,
+        "ontology_mode": "merged",
+        "ontology_version": "3.9.1-refactored-40plus"
+        "pattern_count": 0,
+        "score_breakdown": [],
+        "shed_hd_score": 3.957,
+        "structural_deception_flag": false,
+        "symbolic_rules_fired": [],
+        "threshold_used": 0.22
+      },
+      "linked_fact_uuid": "332FBF8DAB7B45EC",
+      "node_id": "SOVEREIGN-9010",
+      "statement": "On 2026-05-31, the Sovereign Node detected a violation triggering STRUCTURAL_REFUSAL. This document serves as the formal record under the project's governance protocol.",
+      "status": "ISSUED",
+      "tau_level_at_event": 0.22,
+      "timestamp": "2026-05-31T14:45:21.542648+00:00Z",
+      "trigger_event": "STRUCTURAL_REFUSAL"
+    },
+    "hash": "a58266bd28f3cdfac9456ba534f2ca12e20696c4fc1deab223bef4c89c368163",
+    "timestamp": "2026-05-31T14:45:21.542648+00:00Z",
+    "type": "AFFIDAVIT"
+  },
+  {
+    "data": {
+      "affidavit_id": "AFF-20260531-151620",
+      "deception_summary": {
+        "char_diversity_ratio": 0.3654,
+        "confidence_score": 0.0,
+        "deception_probability": 0.0,
+        "eight_rule_fired": [],
+        "entropy": 3.957,
+        "entropy_contribution": 0.0,
+        "high_entropy_flag": false,
+        "information_density_note": "WITHIN_EXPECTED_RANGE",
+        "is_deceptive": false,
+        "low_diversity_flag": false,
+        "ontology_mode": "merged",
+        "ontology_version": "3.9.1-refactored-40plus"
+        "pattern_count": 0,
+        "score_breakdown": [],
+        "shed_hd_score": 3.957,
+        "structural_deception_flag": false,
+        "symbolic_rules_fired": [],
+        "threshold_used": 0.22
+      },
+      "linked_fact_uuid": "2C699A9FCB69E2D0",
+      "node_id": "SOVEREIGN-9010",
+      "statement": "On 2026-05-31, the Sovereign Node detected a violation triggering STRUCTURAL_REFUSAL. This document serves as the formal record under the project's governance protocol.",
+      "status": "ISSUED",
+      "tau_level_at_event": 0.22,
+      "timestamp": "2026-05-31T15:16:20.015244+00:00Z",
+      "trigger_event": "STRUCTURAL_REFUSAL"
+    },
+    "hash": "c0bc80168e3cd1f9de4ed5ec88bf3e107c711fb4b9aa444338ddb1cc06845b39",
+    "previous_hash": "a58266bd28f3cdfac9456ba534f2ca12e20696c4fc1deab223bef4c89c368163",
+    "timestamp": "2026-05-31T15:16:20.015244+00:00Z",
+    "type": "AFFIDAVIT"
+  }
+]

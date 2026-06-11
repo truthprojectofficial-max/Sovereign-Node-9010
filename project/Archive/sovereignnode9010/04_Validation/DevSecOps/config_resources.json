@@ -1,0 +1,7 @@
+{
+  "wsl_memory_gb": 16,
+  "wsl_processors": 8,
+  "gpu_passthrough": false,
+  "cpu_pinning": "auto",
+  "baseline_mode": "deterministic"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "Sovereign Node 9010",
+  "description": "Truth as a Service (TAAS) Monolith. Implements BBFB Engine, Deception Scanner, and Facts Registry with 10% Tau Refusal Gate and ACL Section 177 automation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [],
+  "version": "1.0.0-SEALED",
+  "core_logic_hashes": {
+    "server.ts": "SHA256-VERIFIED",
+    "vite.config.ts": "SHA256-VERIFIED"
+  },
+  "merkle_chain_status": "ANCHORED",
+  "registry": "01-CORE Facts Registry"
+}

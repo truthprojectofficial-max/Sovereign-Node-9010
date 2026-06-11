@@ -1,0 +1,1075 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS D:\PortableSetup>
+PS D:\PortableSetup>
+PS D:\PortableSetup> D:\PortableSetup\Start-LDDE-Aider.ps1
+=== LDDE Portable Aider Launcher ===
+Drive: D:
+OLLAMA_MODELS = D:\OllamaModels
+Working directory: D:\Workspaces\active
+Mode: DEFAULT (LDDE tuned)
+
+Launching Aider...
+Using models from: D:\OllamaModels
+Histories stored on: D:\AiderCache
+usage: __main__.py [-h] [--model MODEL] [--openai-api-key OPENAI_API_KEY] [--anthropic-api-key ANTHROPIC_API_KEY]
+                   [--openai-api-base OPENAI_API_BASE] [--openai-api-type OPENAI_API_TYPE]
+                   [--openai-api-version OPENAI_API_VERSION] [--openai-api-deployment-id OPENAI_API_DEPLOYMENT_ID]
+                   [--openai-organization-id OPENAI_ORGANIZATION_ID] [--set-env ENV_VAR_NAME=value]
+                   [--api-key PROVIDER=KEY] [--list-models MODEL] [--model-settings-file MODEL_SETTINGS_FILE]
+                   [--model-metadata-file MODEL_METADATA_FILE] [--alias ALIAS:MODEL]
+                   [--reasoning-effort REASONING_EFFORT] [--thinking-tokens THINKING_TOKENS]
+                   [--verify-ssl | --no-verify-ssl] [--timeout TIMEOUT] [--edit-format EDIT_FORMAT] [--architect]
+                   [--auto-accept-architect | --no-auto-accept-architect] [--weak-model WEAK_MODEL]
+                   [--editor-model EDITOR_MODEL] [--editor-edit-format EDITOR_EDIT_FORMAT]
+                   [--show-model-warnings | --no-show-model-warnings]
+                   [--check-model-accepts-settings | --no-check-model-accepts-settings]
+                   [--max-chat-history-tokens MAX_CHAT_HISTORY_TOKENS] [--cache-prompts | --no-cache-prompts]
+                   [--cache-keepalive-pings CACHE_KEEPALIVE_PINGS] [--map-tokens MAP_TOKENS]
+                   [--map-refresh {auto,always,files,manual}] [--map-multiplier-no-files MAP_MULTIPLIER_NO_FILES]
+                   [--input-history-file INPUT_HISTORY_FILE] [--chat-history-file CHAT_HISTORY_FILE]
+                   [--restore-chat-history | --no-restore-chat-history] [--llm-history-file LLM_HISTORY_FILE]
+                   [--dark-mode] [--light-mode] [--pretty | --no-pretty] [--stream | --no-stream]
+                   [--user-input-color USER_INPUT_COLOR] [--tool-output-color TOOL_OUTPUT_COLOR]
+                   [--tool-error-color TOOL_ERROR_COLOR] [--tool-warning-color TOOL_WARNING_COLOR]
+                   [--assistant-output-color ASSISTANT_OUTPUT_COLOR] [--completion-menu-color COLOR]
+                   [--completion-menu-bg-color COLOR] [--completion-menu-current-color COLOR]
+                   [--completion-menu-current-bg-color COLOR] [--code-theme CODE_THEME] [--show-diffs]
+                   [--git | --no-git] [--gitignore | --no-gitignore]
+                   [--add-gitignore-files | --no-add-gitignore-files] [--aiderignore AIDERIGNORE] [--subtree-only]
+                   [--auto-commits | --no-auto-commits] [--dirty-commits | --no-dirty-commits]
+                   [--attribute-author | --no-attribute-author] [--attribute-committer | --no-attribute-committer]
+                   [--attribute-commit-message-author | --no-attribute-commit-message-author]
+                   [--attribute-commit-message-committer | --no-attribute-commit-message-committer]
+                   [--attribute-co-authored-by | --no-attribute-co-authored-by]
+                   [--git-commit-verify | --no-git-commit-verify] [--commit] [--commit-prompt PROMPT]
+                   [--dry-run | --no-dry-run] [--skip-sanity-check-repo] [--watch-files | --no-watch-files] [--lint]
+                   [--lint-cmd LINT_CMD] [--auto-lint | --no-auto-lint] [--test-cmd TEST_CMD]
+                   [--auto-test | --no-auto-test] [--test] [--analytics | --no-analytics]
+                   [--analytics-log ANALYTICS_LOG_FILE] [--analytics-disable]
+                   [--analytics-posthog-host ANALYTICS_POSTHOG_HOST]
+                   [--analytics-posthog-project-api-key ANALYTICS_POSTHOG_PROJECT_API_KEY] [--just-check-update]
+                   [--check-update | --no-check-update] [--show-release-notes | --no-show-release-notes]
+                   [--install-main-branch] [--upgrade] [--version] [--message COMMAND] [--message-file MESSAGE_FILE]
+                   [--gui | --no-gui | --browser | --no-browser] [--copy-paste | --no-copy-paste] [--apply FILE]
+                   [--apply-clipboard-edits] [--exit] [--show-repo-map] [--show-prompts] [--voice-format VOICE_FORMAT]
+                   [--voice-language VOICE_LANGUAGE] [--voice-input-device VOICE_INPUT_DEVICE] [--disable-playwright]
+                   [--file FILE] [--read FILE] [--vim] [--chat-language CHAT_LANGUAGE]
+                   [--commit-language COMMIT_LANGUAGE] [--yes-always] [-v] [--load LOAD_FILE] [--encoding ENCODING]
+                   [--line-endings {platform,lf,crlf}] [-c CONFIG_FILE] [--env-file ENV_FILE]
+                   [--suggest-shell-commands | --no-suggest-shell-commands] [--fancy-input | --no-fancy-input]
+                   [--multiline | --no-multiline] [--notifications | --no-notifications]
+                   [--notifications-command COMMAND] [--detect-urls | --no-detect-urls] [--editor EDITOR]
+                   [--shell-completions SHELL] [--opus] [--sonnet] [--haiku] [--4] [--4o] [--mini] [--4-turbo]
+                   [--35turbo] [--deepseek] [--o1-mini] [--o1-preview]
+                   [FILE ...]
+__main__.py: error: unrecognized arguments: --instructions=.aider.instructions.md
+
+Aider session ended.
+Tip: Move finished work from D:\Workspaces\active to D:\Workspaces\archive when done.
+PS D:\Workspaces\active> Windows PowerShell
+Windows : The term 'Windows' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Windows PowerShell
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Windows:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> Copyright (C) Microsoft Corporation. All rights reserved.
+C : The term 'C' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:12
++ Copyright (C) Microsoft Corporation. All rights reserved.
++            ~
+    + CategoryInfo          : ObjectNotFound: (C:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active>
+PS D:\Workspaces\active> Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+Install : The term 'Install' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Install the latest PowerShell for new features and improvements! http ...
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Install:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active>
+PS D:\Workspaces\active> PS D:\PortableSetup>
+PS : Cannot find a process with the name "D:\PortableSetup>". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ PS D:\PortableSetup>
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\PortableSetup>:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS D:\Workspaces\active> PS D:\PortableSetup>
+PS : Cannot find a process with the name "D:\PortableSetup>". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ PS D:\PortableSetup>
++ ~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\PortableSetup>:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS D:\Workspaces\active> PS D:\PortableSetup> D:\PortableSetup\Start-LDDE-Aider.ps1
+Get-Process : A positional parameter cannot be found that accepts argument 'D:\PortableSetup\Start-LDDE-Aider.ps1'.
+At line:1 char:1
++ PS D:\PortableSetup> D:\PortableSetup\Start-LDDE-Aider.ps1
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : InvalidArgument: (:) [Get-Process], ParameterBindingException
+    + FullyQualifiedErrorId : PositionalParameterNotFound,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS D:\Workspaces\active> === LDDE Portable Aider Launcher ===
+=== : The term '===' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ === LDDE Portable Aider Launcher ===
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (===:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> Drive: D:
+Drive: : The term 'Drive:' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Drive: D:
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Drive::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> OLLAMA_MODELS = D:\OllamaModels
+OLLAMA_MODELS : The term 'OLLAMA_MODELS' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ OLLAMA_MODELS = D:\OllamaModels
++ ~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (OLLAMA_MODELS:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> Working directory: D:\Workspaces\active
+Working : The term 'Working' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Working directory: D:\Workspaces\active
++ ~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Working:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> Mode: DEFAULT (LDDE tuned)
+LDDE : The term 'LDDE' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:16
++ Mode: DEFAULT (LDDE tuned)
++                ~~~~
+    + CategoryInfo          : ObjectNotFound: (LDDE:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active>
+PS D:\Workspaces\active> Launching Aider...
+Launching : The term 'Launching' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Launching Aider...
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Launching:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> Using models from: D:\OllamaModels
+At line:1 char:6
++ Using models from: D:\OllamaModels
++      ~
+Missing using directive
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingUsingStatementDirective
+
+PS D:\Workspaces\active> Histories stored on: D:\AiderCache
+Histories : The term 'Histories' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Histories stored on: D:\AiderCache
++ ~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Histories:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> usage: __main__.py [-h] [--model MODEL] [--openai-api-key OPENAI_API_KEY] [--anthropic-api-key ANTHROPIC_API_KEY]
+usage: : The term 'usage:' is not recognized as the name of a cmdlet, function, script file, or operable program.
+Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ usage: __main__.py [-h] [--model MODEL] [--openai-api-key OPENAI_API_ ...
++ ~~~~~~
+    + CategoryInfo          : ObjectNotFound: (usage::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active>                    [--openai-api-base OPENAI_API_BASE] [--openai-api-type OPENAI_API_TYPE]
+At line:1 char:21
++                    [--openai-api-base OPENAI_API_BASE] [--openai-api- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--openai-api-version OPENAI_API_VERSION] [--openai-api-deployment-id OPENAI_API_DEPLOYMENT_ID]
+At line:1 char:21
++                    [--openai-api-version OPENAI_API_VERSION] [--opena ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--openai-organization-id OPENAI_ORGANIZATION_ID] [--set-env ENV_VAR_NAME=value]
+At line:1 char:21
++                    [--openai-organization-id OPENAI_ORGANIZATION_ID]  ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--api-key PROVIDER=KEY] [--list-models MODEL] [--model-settings-file MODEL_SETTINGS_FILE]
+At line:1 char:21
++                    [--api-key PROVIDER=KEY] [--list-models MODEL] [-- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--model-metadata-file MODEL_METADATA_FILE] [--alias ALIAS:MODEL]
+At line:1 char:21
++                    [--model-metadata-file MODEL_METADATA_FILE] [--ali ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--reasoning-effort REASONING_EFFORT] [--thinking-tokens THINKING_TOKENS]
+At line:1 char:21
++                    [--reasoning-effort REASONING_EFFORT] [--thinking- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--verify-ssl | --no-verify-ssl] [--timeout TIMEOUT] [--edit-format EDIT_FORMAT] [--architect]
+At line:1 char:21
++                    [--verify-ssl | --no-verify-ssl] [--timeout TIMEOU ...
++                     ~
+Missing type name after '['.
+At line:1 char:38
++                    [--verify-ssl | --no-verify-ssl] [--timeout TIMEOU ...
++                                      ~
+Missing expression after unary operator '--'.
+At line:1 char:36
++                    [--verify-ssl | --no-verify-ssl] [--timeout TIMEOU ...
++                                    ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:38
++                    [--verify-ssl | --no-verify-ssl] [--timeout TIMEOU ...
++                                      ~~~~~~~~~~~~~~
+Unexpected token 'no-verify-ssl]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--auto-accept-architect | --no-auto-accept-architect] [--weak-model WEAK_MODEL]
+At line:1 char:21
++                    [--auto-accept-architect | --no-auto-accept-archit ...
++                     ~
+Missing type name after '['.
+At line:1 char:49
++                    [--auto-accept-architect | --no-auto-accept-archit ...
++                                                 ~
+Missing expression after unary operator '--'.
+At line:1 char:47
++                    [--auto-accept-architect | --no-auto-accept-archit ...
++                                               ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:49
++ ...        [--auto-accept-architect | --no-auto-accept-architect] [--weak ...
++                                         ~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-auto-accept-architect]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--editor-model EDITOR_MODEL] [--editor-edit-format EDITOR_EDIT_FORMAT]
+At line:1 char:21
++                    [--editor-model EDITOR_MODEL] [--editor-edit-forma ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--show-model-warnings | --no-show-model-warnings]
+At line:1 char:21
++                    [--show-model-warnings | --no-show-model-warnings]
++                     ~
+Missing type name after '['.
+At line:1 char:47
++                    [--show-model-warnings | --no-show-model-warnings]
++                                               ~
+Missing expression after unary operator '--'.
+At line:1 char:45
++                    [--show-model-warnings | --no-show-model-warnings]
++                                             ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:47
++                    [--show-model-warnings | --no-show-model-warnings]
++                                               ~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-show-model-warnings]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--check-model-accepts-settings | --no-check-model-accepts-settings]
+At line:1 char:21
++                    [--check-model-accepts-settings | --no-check-model ...
++                     ~
+Missing type name after '['.
+At line:1 char:56
++                    [--check-model-accepts-settings | --no-check-model ...
++                                                        ~
+Missing expression after unary operator '--'.
+At line:1 char:54
++                    [--check-model-accepts-settings | --no-check-model ...
++                                                      ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:56
++ ...  [--check-model-accepts-settings | --no-check-model-accepts-settings]
++                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-check-model-accepts-settings]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--max-chat-history-tokens MAX_CHAT_HISTORY_TOKENS] [--cache-prompts | --no-cache-prompts]
+At line:1 char:21
++                    [--max-chat-history-tokens MAX_CHAT_HISTORY_TOKENS ...
++                     ~
+Missing type name after '['.
+At line:1 char:93
++ ... history-tokens MAX_CHAT_HISTORY_TOKENS] [--cache-prompts | --no-cache ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:91
++ ... history-tokens MAX_CHAT_HISTORY_TOKENS] [--cache-prompts | --no-cache ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:93
++ ... okens MAX_CHAT_HISTORY_TOKENS] [--cache-prompts | --no-cache-prompts]
++                                                         ~~~~~~~~~~~~~~~~~
+Unexpected token 'no-cache-prompts]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--cache-keepalive-pings CACHE_KEEPALIVE_PINGS] [--map-tokens MAP_TOKENS]
+At line:1 char:21
++                    [--cache-keepalive-pings CACHE_KEEPALIVE_PINGS] [- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--map-refresh {auto,always,files,manual}] [--map-multiplier-no-files MAP_MULTIPLIER_NO_FILES]
+At line:1 char:21
++                    [--map-refresh {auto,always,files,manual}] [--map- ...
++                     ~
+Missing type name after '['.
+At line:1 char:40
++                    [--map-refresh {auto,always,files,manual}] [--map- ...
++                                        ~
+Missing argument in parameter list.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--input-history-file INPUT_HISTORY_FILE] [--chat-history-file CHAT_HISTORY_FILE]
+At line:1 char:21
++                    [--input-history-file INPUT_HISTORY_FILE] [--chat- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--restore-chat-history | --no-restore-chat-history] [--llm-history-file LLM_HISTORY_FILE]
+At line:1 char:21
++                    [--restore-chat-history | --no-restore-chat-histor ...
++                     ~
+Missing type name after '['.
+At line:1 char:48
++                    [--restore-chat-history | --no-restore-chat-histor ...
++                                                ~
+Missing expression after unary operator '--'.
+At line:1 char:46
++                    [--restore-chat-history | --no-restore-chat-histor ...
++                                              ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:48
++ ...          [--restore-chat-history | --no-restore-chat-history] [--llm- ...
++                                          ~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-restore-chat-history]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--dark-mode] [--light-mode] [--pretty | --no-pretty] [--stream | --no-stream]
+At line:1 char:21
++                    [--dark-mode] [--light-mode] [--pretty | --no-pret ...
++                     ~
+Missing type name after '['.
+At line:1 char:63
++ ...                   [--dark-mode] [--light-mode] [--pretty | --no-prett ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:61
++ ...                   [--dark-mode] [--light-mode] [--pretty | --no-prett ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:63
++ ...         [--dark-mode] [--light-mode] [--pretty | --no-pretty] [--stre ...
++                                                        ~~~~~~~~~~
+Unexpected token 'no-pretty]' in expression or statement.
+At line:1 char:88
++ ... -mode] [--light-mode] [--pretty | --no-pretty] [--stream | --no-strea ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:86
++ ... -mode] [--light-mode] [--pretty | --no-pretty] [--stream | --no-strea ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:88
++ ... ode] [--light-mode] [--pretty | --no-pretty] [--stream | --no-stream]
++                                                                ~~~~~~~~~~
+Unexpected token 'no-stream]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--user-input-color USER_INPUT_COLOR] [--tool-output-color TOOL_OUTPUT_COLOR]
+At line:1 char:21
++                    [--user-input-color USER_INPUT_COLOR] [--tool-outp ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--tool-error-color TOOL_ERROR_COLOR] [--tool-warning-color TOOL_WARNING_COLOR]
+At line:1 char:21
++                    [--tool-error-color TOOL_ERROR_COLOR] [--tool-warn ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--assistant-output-color ASSISTANT_OUTPUT_COLOR] [--completion-menu-color COLOR]
+At line:1 char:21
++                    [--assistant-output-color ASSISTANT_OUTPUT_COLOR]  ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--completion-menu-bg-color COLOR] [--completion-menu-current-color COLOR]
+At line:1 char:21
++                    [--completion-menu-bg-color COLOR] [--completion-m ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--completion-menu-current-bg-color COLOR] [--code-theme CODE_THEME] [--show-diffs]
+At line:1 char:21
++                    [--completion-menu-current-bg-color COLOR] [--code ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--git | --no-git] [--gitignore | --no-gitignore]
+At line:1 char:21
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                     ~
+Missing type name after '['.
+At line:1 char:31
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                               ~
+Missing expression after unary operator '--'.
+At line:1 char:29
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                             ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:31
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                               ~~~~~~~
+Unexpected token 'no-git]' in expression or statement.
+At line:1 char:56
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                                                        ~
+Missing expression after unary operator '--'.
+At line:1 char:54
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                                                      ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:56
++                    [--git | --no-git] [--gitignore | --no-gitignore]
++                                                        ~~~~~~~~~~~~~
+Unexpected token 'no-gitignore]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--add-gitignore-files | --no-add-gitignore-files] [--aiderignore AIDERIGNORE] [--subtree-only]
+At line:1 char:21
++                    [--add-gitignore-files | --no-add-gitignore-files] ...
++                     ~
+Missing type name after '['.
+At line:1 char:47
++                    [--add-gitignore-files | --no-add-gitignore-files] ...
++                                               ~
+Missing expression after unary operator '--'.
+At line:1 char:45
++                    [--add-gitignore-files | --no-add-gitignore-files] ...
++                                             ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:47
++ ...            [--add-gitignore-files | --no-add-gitignore-files] [--aide ...
++                                           ~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-add-gitignore-files]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--auto-commits | --no-auto-commits] [--dirty-commits | --no-dirty-commits]
+At line:1 char:21
++                    [--auto-commits | --no-auto-commits] [--dirty-comm ...
++                     ~
+Missing type name after '['.
+At line:1 char:40
++                    [--auto-commits | --no-auto-commits] [--dirty-comm ...
++                                        ~
+Missing expression after unary operator '--'.
+At line:1 char:38
++                    [--auto-commits | --no-auto-commits] [--dirty-comm ...
++                                      ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:40
++                    [--auto-commits | --no-auto-commits] [--dirty-comm ...
++                                        ~~~~~~~~~~~~~~~~
+Unexpected token 'no-auto-commits]' in expression or statement.
+At line:1 char:78
++ ...    [--auto-commits | --no-auto-commits] [--dirty-commits | --no-dirty ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:76
++ ...    [--auto-commits | --no-auto-commits] [--dirty-commits | --no-dirty ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:78
++ ... o-commits | --no-auto-commits] [--dirty-commits | --no-dirty-commits]
++                                                         ~~~~~~~~~~~~~~~~~
+Unexpected token 'no-dirty-commits]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--attribute-author | --no-attribute-author] [--attribute-committer | --no-attribute-committer]
+At line:1 char:21
++                    [--attribute-author | --no-attribute-author] [--at ...
++                     ~
+Missing type name after '['.
+At line:1 char:44
++                    [--attribute-author | --no-attribute-author] [--at ...
++                                            ~
+Missing expression after unary operator '--'.
+At line:1 char:42
++                    [--attribute-author | --no-attribute-author] [--at ...
++                                          ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:44
++ ...                  [--attribute-author | --no-attribute-author] [--attr ...
++                                              ~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-attribute-author]' in expression or statement.
+At line:1 char:92
++ ... e-author | --no-attribute-author] [--attribute-committer | --no-attri ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:90
++ ... e-author | --no-attribute-author] [--attribute-committer | --no-attri ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:92
++ ... -attribute-author] [--attribute-committer | --no-attribute-committer]
++                                                   ~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-attribute-committer]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--attribute-commit-message-author | --no-attribute-commit-message-author]
+At line:1 char:21
++                    [--attribute-commit-message-author | --no-attribut ...
++                     ~
+Missing type name after '['.
+At line:1 char:59
++                    [--attribute-commit-message-author | --no-attribut ...
++                                                           ~
+Missing expression after unary operator '--'.
+At line:1 char:57
++                    [--attribute-commit-message-author | --no-attribut ...
++                                                         ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:59
++ ... tribute-commit-message-author | --no-attribute-commit-message-author]
++                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-attribute-commit-message-author]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--attribute-commit-message-committer | --no-attribute-commit-message-committer]
+At line:1 char:21
++                    [--attribute-commit-message-committer | --no-attri ...
++                     ~
+Missing type name after '['.
+At line:1 char:62
++                    [--attribute-commit-message-committer | --no-attri ...
++                                                              ~
+Missing expression after unary operator '--'.
+At line:1 char:60
++                    [--attribute-commit-message-committer | --no-attri ...
++                                                            ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:62
++ ... e-commit-message-committer | --no-attribute-commit-message-committer]
++                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-attribute-commit-message-committer]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--attribute-co-authored-by | --no-attribute-co-authored-by]
+At line:1 char:21
++                    [--attribute-co-authored-by | --no-attribute-co-au ...
++                     ~
+Missing type name after '['.
+At line:1 char:52
++                    [--attribute-co-authored-by | --no-attribute-co-au ...
++                                                    ~
+Missing expression after unary operator '--'.
+At line:1 char:50
++                    [--attribute-co-authored-by | --no-attribute-co-au ...
++                                                  ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:52
++ ...          [--attribute-co-authored-by | --no-attribute-co-authored-by]
++                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-attribute-co-authored-by]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--git-commit-verify | --no-git-commit-verify] [--commit] [--commit-prompt PROMPT]
+At line:1 char:21
++                    [--git-commit-verify | --no-git-commit-verify] [-- ...
++                     ~
+Missing type name after '['.
+At line:1 char:45
++                    [--git-commit-verify | --no-git-commit-verify] [-- ...
++                                             ~
+Missing expression after unary operator '--'.
+At line:1 char:43
++                    [--git-commit-verify | --no-git-commit-verify] [-- ...
++                                           ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:45
++ ...                [--git-commit-verify | --no-git-commit-verify] [--comm ...
++                                             ~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-git-commit-verify]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--dry-run | --no-dry-run] [--skip-sanity-check-repo] [--watch-files | --no-watch-files] [--lint]
+At line:1 char:21
++                    [--dry-run | --no-dry-run] [--skip-sanity-check-re ...
++                     ~
+Missing type name after '['.
+At line:1 char:35
++                    [--dry-run | --no-dry-run] [--skip-sanity-check-re ...
++                                   ~
+Missing expression after unary operator '--'.
+At line:1 char:33
++                    [--dry-run | --no-dry-run] [--skip-sanity-check-re ...
++                                 ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:35
++                    [--dry-run | --no-dry-run] [--skip-sanity-check-re ...
++                                   ~~~~~~~~~~~
+Unexpected token 'no-dry-run]' in expression or statement.
+At line:1 char:93
++ ...  --no-dry-run] [--skip-sanity-check-repo] [--watch-files | --no-watch ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:91
++ ...  --no-dry-run] [--skip-sanity-check-repo] [--watch-files | --no-watch ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:93
++ ... [--skip-sanity-check-repo] [--watch-files | --no-watch-files] [--lint ...
++                                                   ~~~~~~~~~~~~~~~
+Unexpected token 'no-watch-files]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--lint-cmd LINT_CMD] [--auto-lint | --no-auto-lint] [--test-cmd TEST_CMD]
+At line:1 char:21
++                    [--lint-cmd LINT_CMD] [--auto-lint | --no-auto-lin ...
++                     ~
+Missing type name after '['.
+At line:1 char:59
++                    [--lint-cmd LINT_CMD] [--auto-lint | --no-auto-lin ...
++                                                           ~
+Missing expression after unary operator '--'.
+At line:1 char:57
++                    [--lint-cmd LINT_CMD] [--auto-lint | --no-auto-lin ...
++                                                         ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:59
++ ...          [--lint-cmd LINT_CMD] [--auto-lint | --no-auto-lint] [--test ...
++                                                     ~~~~~~~~~~~~~
+Unexpected token 'no-auto-lint]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--auto-test | --no-auto-test] [--test] [--analytics | --no-analytics]
+At line:1 char:21
++                    [--auto-test | --no-auto-test] [--test] [--analyti ...
++                     ~
+Missing type name after '['.
+At line:1 char:37
++                    [--auto-test | --no-auto-test] [--test] [--analyti ...
++                                     ~
+Missing expression after unary operator '--'.
+At line:1 char:35
++                    [--auto-test | --no-auto-test] [--test] [--analyti ...
++                                   ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:37
++                    [--auto-test | --no-auto-test] [--test] [--analyti ...
++                                     ~~~~~~~~~~~~~
+Unexpected token 'no-auto-test]' in expression or statement.
+At line:1 char:77
++ ...     [--auto-test | --no-auto-test] [--test] [--analytics | --no-analy ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:75
++ ...     [--auto-test | --no-auto-test] [--test] [--analytics | --no-analy ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:77
++ ... --auto-test | --no-auto-test] [--test] [--analytics | --no-analytics]
++                                                             ~~~~~~~~~~~~~
+Unexpected token 'no-analytics]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--analytics-log ANALYTICS_LOG_FILE] [--analytics-disable]
+At line:1 char:21
++                    [--analytics-log ANALYTICS_LOG_FILE] [--analytics- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--analytics-posthog-host ANALYTICS_POSTHOG_HOST]
+At line:1 char:21
++                    [--analytics-posthog-host ANALYTICS_POSTHOG_HOST]
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--analytics-posthog-project-api-key ANALYTICS_POSTHOG_PROJECT_API_KEY] [--just-check-update]
+At line:1 char:21
++                    [--analytics-posthog-project-api-key ANALYTICS_POS ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--check-update | --no-check-update] [--show-release-notes | --no-show-release-notes]
+At line:1 char:21
++                    [--check-update | --no-check-update] [--show-relea ...
++                     ~
+Missing type name after '['.
+At line:1 char:40
++                    [--check-update | --no-check-update] [--show-relea ...
++                                        ~
+Missing expression after unary operator '--'.
+At line:1 char:38
++                    [--check-update | --no-check-update] [--show-relea ...
++                                      ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:40
++                    [--check-update | --no-check-update] [--show-relea ...
++                                        ~~~~~~~~~~~~~~~~
+Unexpected token 'no-check-update]' in expression or statement.
+At line:1 char:83
++ ... -check-update | --no-check-update] [--show-release-notes | --no-show- ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:81
++ ... -check-update | --no-check-update] [--show-release-notes | --no-show- ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:83
++ ... | --no-check-update] [--show-release-notes | --no-show-release-notes]
++                                                    ~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-show-release-notes]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--install-main-branch] [--upgrade] [--version] [--message COMMAND] [--message-file MESSAGE_FILE]
+At line:1 char:21
++                    [--install-main-branch] [--upgrade] [--version] [- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--gui | --no-gui | --browser | --no-browser] [--copy-paste | --no-copy-paste] [--apply FILE]
+At line:1 char:21
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                     ~
+Missing type name after '['.
+At line:1 char:31
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                               ~
+Missing expression after unary operator '--'.
+At line:1 char:29
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                             ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:31
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                               ~~~~~~
+Unexpected token 'no-gui' in expression or statement.
+At line:1 char:42
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                                          ~
+Missing expression after unary operator '--'.
+At line:1 char:40
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                                        ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:42
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                                          ~~~~~~~
+Unexpected token 'browser' in expression or statement.
+At line:1 char:54
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                                                      ~
+Missing expression after unary operator '--'.
+At line:1 char:52
++                    [--gui | --no-gui | --browser | --no-browser] [--c ...
++                                                    ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:54
++ ...                 [--gui | --no-gui | --browser | --no-browser] [--copy ...
++                                                       ~~~~~~~~~~~
+Unexpected token 'no-browser]' in expression or statement.
+Not all parse errors were reported.  Correct the reported errors and try again.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--apply-clipboard-edits] [--exit] [--show-repo-map] [--show-prompts] [--voice-format VOICE_FORMAT]
+At line:1 char:21
++                    [--apply-clipboard-edits] [--exit] [--show-repo-ma ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--voice-language VOICE_LANGUAGE] [--voice-input-device VOICE_INPUT_DEVICE] [--disable-playwright]
+At line:1 char:21
++                    [--voice-language VOICE_LANGUAGE] [--voice-input-d ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--file FILE] [--read FILE] [--vim] [--chat-language CHAT_LANGUAGE]
+At line:1 char:21
++                    [--file FILE] [--read FILE] [--vim] [--chat-langua ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--commit-language COMMIT_LANGUAGE] [--yes-always] [-v] [--load LOAD_FILE] [--encoding ENCODING]
+At line:1 char:21
++                    [--commit-language COMMIT_LANGUAGE] [--yes-always] ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--line-endings {platform,lf,crlf}] [-c CONFIG_FILE] [--env-file ENV_FILE]
+At line:1 char:21
++                    [--line-endings {platform,lf,crlf}] [-c CONFIG_FIL ...
++                     ~
+Missing type name after '['.
+At line:1 char:45
++                    [--line-endings {platform,lf,crlf}] [-c CONFIG_FIL ...
++                                             ~
+Missing argument in parameter list.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--suggest-shell-commands | --no-suggest-shell-commands] [--fancy-input | --no-fancy-input]
+At line:1 char:21
++                    [--suggest-shell-commands | --no-suggest-shell-com ...
++                     ~
+Missing type name after '['.
+At line:1 char:50
++                    [--suggest-shell-commands | --no-suggest-shell-com ...
++                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:48
++                    [--suggest-shell-commands | --no-suggest-shell-com ...
++                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:50
++ ...      [--suggest-shell-commands | --no-suggest-shell-commands] [--fanc ...
++                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~
+Unexpected token 'no-suggest-shell-commands]' in expression or statement.
+At line:1 char:96
++ ... l-commands | --no-suggest-shell-commands] [--fancy-input | --no-fancy ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:94
++ ... l-commands | --no-suggest-shell-commands] [--fancy-input | --no-fancy ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:96
++ ... nds | --no-suggest-shell-commands] [--fancy-input | --no-fancy-input]
++                                                           ~~~~~~~~~~~~~~~
+Unexpected token 'no-fancy-input]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--multiline | --no-multiline] [--notifications | --no-notifications]
+At line:1 char:21
++                    [--multiline | --no-multiline] [--notifications |  ...
++                     ~
+Missing type name after '['.
+At line:1 char:37
++                    [--multiline | --no-multiline] [--notifications |  ...
++                                     ~
+Missing expression after unary operator '--'.
+At line:1 char:35
++                    [--multiline | --no-multiline] [--notifications |  ...
++                                   ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:37
++                    [--multiline | --no-multiline] [--notifications |  ...
++                                     ~~~~~~~~~~~~~
+Unexpected token 'no-multiline]' in expression or statement.
+At line:1 char:72
++ ...          [--multiline | --no-multiline] [--notifications | --no-notif ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:70
++ ...          [--multiline | --no-multiline] [--notifications | --no-notif ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:72
++ ... [--multiline | --no-multiline] [--notifications | --no-notifications]
++                                                         ~~~~~~~~~~~~~~~~~
+Unexpected token 'no-notifications]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--notifications-command COMMAND] [--detect-urls | --no-detect-urls] [--editor EDITOR]
+At line:1 char:21
++                    [--notifications-command COMMAND] [--detect-urls | ...
++                     ~
+Missing type name after '['.
+At line:1 char:73
++ ...         [--notifications-command COMMAND] [--detect-urls | --no-detec ...
++                                                                  ~
+Missing expression after unary operator '--'.
+At line:1 char:71
++ ...         [--notifications-command COMMAND] [--detect-urls | --no-detec ...
++                                                                ~~
+Expressions are only allowed as the first element of a pipeline.
+At line:1 char:73
++ ... fications-command COMMAND] [--detect-urls | --no-detect-urls] [--edit ...
++                                                   ~~~~~~~~~~~~~~~
+Unexpected token 'no-detect-urls]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--shell-completions SHELL] [--opus] [--sonnet] [--haiku] [--4] [--4o] [--mini] [--4-turbo]
+At line:1 char:21
++                    [--shell-completions SHELL] [--opus] [--sonnet] [- ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [--35turbo] [--deepseek] [--o1-mini] [--o1-preview]
+At line:1 char:21
++                    [--35turbo] [--deepseek] [--o1-mini] [--o1-preview ...
++                     ~
+Missing type name after '['.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : MissingTypename
+
+PS D:\Workspaces\active>                    [FILE ...]
+At line:1 char:25
++                    [FILE ...]
++                         ~
+Missing ] at end of attribute or type literal.
+At line:1 char:28
++                    [FILE ...]
++                            ~
+You must provide a value expression following the '..' operator.
+At line:1 char:28
++                    [FILE ...]
++                            ~~
+Unexpected token '.]' in expression or statement.
+    + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+    + FullyQualifiedErrorId : EndSquareBracketExpectedAtEndOfAttribute
+
+PS D:\Workspaces\active> __main__.py: error: unrecognized arguments: --instructions=.aider.instructions.md
+__main__.py: : The term '__main__.py:' is not recognized as the name of a cmdlet, function, script file, or operable
+program. Check the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ __main__.py: error: unrecognized arguments: --instructions=.aider.ins ...
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (__main__.py::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active>
+PS D:\Workspaces\active> Aider session ended.
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+No git repo found, create one to track aider's changes (recommended)? (Y)es/(N)o [Yes]: y
+Git repository created in D:\Workspaces\active
+Update git name with: git config user.name "Your Name"
+Update git email with: git config user.email "you@example.com"
+No LLM model was specified and no API keys were provided.
+OpenRouter provides free and paid access to many LLMs.
+Login to OpenRouter or create a free account? (Y)es/(N)o [Yes]: n
+
+https://aider.chat/docs/troubleshooting/models-and-keys.html
+Open documentation URL for more info? (Y)es/(N)o/(D)on't ask again [Yes]: y
+PS D:\Workspaces\active> Tip: Move finished work from D:\Workspaces\active to D:\Workspaces\archive when done.
+Tip: : The term 'Tip:' is not recognized as the name of a cmdlet, function, script file, or operable program. Check
+the spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ Tip: Move finished work from D:\Workspaces\active to D:\Workspaces\ar ...
++ ~~~~
+    + CategoryInfo          : ObjectNotFound: (Tip::String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Workspaces\active> PS D:\Workspaces\active>
+PS : Cannot find a process with the name "D:\Workspaces\active>". Verify the process name and call the cmdlet again.
+At line:1 char:1
++ PS D:\Workspaces\active>
++ ~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (D:\Workspaces\active>:String) [Get-Process], ProcessCommandException
+    + FullyQualifiedErrorId : NoProcessFoundForGivenName,Microsoft.PowerShell.Commands.GetProcessCommand
+
+PS D:\Workspaces\active>
+
+
+
+

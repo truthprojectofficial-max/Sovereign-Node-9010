@@ -1,0 +1,136 @@
+# Sovereign Node 9010 v3.9.1
+# Docker Compose for containerized deterministic audit & detection runs.
+#
+# This gives you:
+# - Reproducible environment (exact Python 3.11 + pinned dateutil)
+# - Persistent Merkle-sealed facts ledger across restarts (named volume)
+# - Proper secret injection (never in image)
+# - Healthchecks that verify the "deterministic=true, black_box=false" contract
+# - Easy one-command start: docker compose up -d
+#
+# Philosophy alignment:
+# - The node inside the container is the same deterministic engine as bare metal.
+# - All decisions remain fully traceable and auditable.
+# - No hidden state between runs when using the volume.
+
+version: "3.9"
+
+services:
+  sovereign-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      # Optional: pass build args for future multi-arch or version pinning
+      # args:
+      #   PYTHON_VERSION: "3.11"
+    image: sovereign-node:3.9.1
+    container_name: sovereign-node-9010
+    restart: unless-stopped
+
+    ports:
+      - "8000:8000"
+
+    # Persistent storage for the append-only Merkle ledger + logs (03_Vault in the strict 00-99 hierarchy)
+    # This is critical for audit continuity and "deterministic" historical queries.
+    # The volume is overlaid on /workspace/03_Vault inside the hardened container.
+    volumes:
+      - sovereign-data:/workspace/03_Vault
+
+    environment:
+      # === REQUIRED SECRETS (override via .env or your secret manager) ===
+      - TAAS_AUTH_TOKEN=${TAAS_AUTH_TOKEN:-change-me-in-production}
+      - AUDIT_SECRET_KEY=${AUDIT_SECRET_KEY:-change-me-in-production}
+
+      # === Optional overrides for advanced deployments ===
+      # Inside the container we use the 00-99 hierarchy (03_Vault)
+      - SOVEREIGN_DB_PATH=/workspace/03_Vault/facts_registry.db
+      - PORT=8000
+      # PYTHONHASHSEED is already set to 0 inside the image for extra determinism
+
+    # Healthcheck re-uses the same logic the dashboard uses.
+    # It will fail the container if the node ever stops claiming to be deterministic.
+    healthcheck:
+      test: ["CMD", "python", "-c", "
+import urllib.request, json, sys
+try:
+    with urllib.request.urlopen('http://127.0.0.1:8000/api/health', timeout=4) as r:
+        d = json.loads(r.read())
+        sys.exit(0 if d.get('deterministic') is True else 1)
+except Exception:
+    sys.exit(1)
+"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 15s
+
+    # Resource limits (tune for your deployment)
+    deploy:
+      resources:
+        limits:
+          cpus: "1.5"
+          memory: 512M
+        reservations:
+          cpus: "0.25"
+          memory: 128M
+
+    # MANDATORY PRE-WORK ENFORCEMENT inside the container
+    # The image ENTRYPOINT already runs check-bootstrap.py.
+    # This compose override makes it even more explicit for local docker compose users.
+    command: >
+      sh -c "python /workspace/04_Validation/check-bootstrap.py && python 02_Technical/server.py"
+
+    # Logging configuration (keeps container logs manageable while preserving audit trail in the DB)
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  sovereign-data:
+    name: sovereign-node-9010-data
+    # For production you can switch to a named external volume or bind mount:
+    # driver: local
+    # driver_opts:
+    #   type: none
+    #   o: bind
+    #   device: /host/path/to/backup/ledger
+
+# =============================================================================
+# Usage examples
+# =============================================================================
+#
+# 1. First run (creates volume + builds):
+#    docker compose up -d
+#
+# 2. View logs:
+#    docker compose logs -f sovereign-node
+#
+# 3. Open the retro dashboard:
+#    http://localhost:8000
+#
+# 4. Validate a statement (example with curl):
+#    curl -X POST http://localhost:8000/api/validate \
+#      -H "Content-Type: application/json" \
+#      -H "X-TAAS-AUTH: change-me-in-production" \
+#      -d '{"statement": "All facts must be Merkle-sealed and fully explainable."}'
+#
+# 5. Stop and remove (volume stays, preserving your audit history):
+#    docker compose down
+#
+# 6. Full clean (WARNING: destroys the Merkle ledger volume):
+#    docker compose down -v
+#
+# 7. Production-style with real secrets (recommended):
+#    TAAS_AUTH_TOKEN="super-long-secret-here" \
+#    AUDIT_SECRET_KEY="another-long-secret" \
+#    docker compose up -d
+#
+#    Or use an .env file (never commit it):
+#    echo "TAAS_AUTH_TOKEN=xxx" > .env
+#    echo "AUDIT_SECRET_KEY=yyy" >> .env
+#    docker compose up -d
+#
+# For ultra-deterministic builds you can also run:
+#    docker build --no-cache -t sovereign-node:3.9.1 .

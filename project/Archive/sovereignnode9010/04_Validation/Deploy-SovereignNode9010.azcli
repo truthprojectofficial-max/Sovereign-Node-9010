@@ -1,0 +1,96 @@
+# Sovereign Node 9010 v3.9.1 — Azure Infrastructure Deployment (.azcli)
+#
+# PRE-WORK IS MANDATORY (equal to the code).
+# You MUST run the strict bootstrap first on your machine or in CI before deploying.
+# This script assumes the hardened Docker image has already been built and pushed
+# (see azure-pipelines.yml or manual `az acr build`).
+#
+# Philosophy: Zero human/AI error, fully reproducible, portable deterministic node.
+#
+# Usage:
+#   1. az login
+#   2. az account set --subscription "<your-sub>"
+#   3. Source or step through this file (replace variables below)
+#
+# After deployment the node will only start if BOOTSTRAP_COMPLETE marker exists
+# in the image (enforced by the ENTRYPOINT).
+
+# ==================== VARIABLES (EDIT THESE) ====================
+$RG="rg-sovereign-node-9010"
+$LOCATION="eastus"
+$ACR_NAME="sovereignnode9010acr"          # must be globally unique
+$APP_NAME="sovereign-node-9010"
+$VAULT_NAME="kv-sovereign-9010"           # must be globally unique
+$STORAGE_ACCOUNT="stsovereign9010"        # for Azure Files (03_Vault persistence)
+$SHARE_NAME="sovereign-vault"
+$IMAGE="sovereign-node-9010:latest"       # or specific tag from your pipeline
+$CONTAINER_APP_ENV="env-sovereign-9010"
+
+# Secrets (in real use, fetch from Key Vault or GitHub secrets — never hardcode)
+$TAAS_TOKEN="REPLACE_WITH_LONG_SECRET"
+$AUDIT_SECRET="REPLACE_WITH_ANOTHER_LONG_SECRET"
+
+# ============================================================
+
+# 1. Resource Group
+az group create --name $RG --location $LOCATION
+
+# 2. Azure Container Registry (for the hardened image)
+az acr create --resource-group $RG --name $ACR_NAME --sku Basic --location $LOCATION
+
+# 3. Key Vault for secrets (TAAS_AUTH_TOKEN + AUDIT_SECRET_KEY)
+az keyvault create --name $VAULT_NAME --resource-group $RG --location $LOCATION
+
+# Store the two critical secrets (these drive the Tau gate and Merkle seals)
+az keyvault secret set --vault-name $VAULT_NAME --name "TAAS-AUTH-TOKEN" --value $TAAS_TOKEN
+az keyvault secret set --vault-name $VAULT_NAME --name "AUDIT-SECRET-KEY" --value $AUDIT_SECRET
+
+# 4. Storage Account + File Share for persistent 03_Vault (Merkle ledger durability)
+az storage account create --name $STORAGE_ACCOUNT --resource-group $RG --location $LOCATION --sku Standard_LRS
+$STORAGE_KEY=$(az storage account keys list --account-name $STORAGE_ACCOUNT --resource-group $RG --query "[0].value" -o tsv)
+az storage share create --name $SHARE_NAME --account-name $STORAGE_ACCOUNT --account-key $STORAGE_KEY
+
+# 5. Container App Environment (with Azure Files mount for 03_Vault)
+az containerapp env create `
+  --name $CONTAINER_APP_ENV `
+  --resource-group $RG `
+  --location $LOCATION
+
+# 6. Deploy the Container App (hardened image + mandatory pre-work + persistent vault)
+az containerapp create `
+  --name $APP_NAME `
+  --resource-group $RG `
+  --environment $CONTAINER_APP_ENV `
+  --image "$ACR_NAME.azurecr.io/$IMAGE" `
+  --target-port 8000 `
+  --ingress external `
+  --min-replicas 1 `
+  --max-replicas 1 `
+  --cpu 1.0 `
+  --memory 2Gi `
+  --env-vars `
+    "TAAS_AUTH_TOKEN=secretref:TAAS-AUTH-TOKEN" `
+    "AUDIT_SECRET_KEY=secretref:AUDIT-SECRET-KEY" `
+    "SOVEREIGN_DB_PATH=/workspace/03_Vault/facts_registry.db" `
+    "NO_NETWORK=1" `
+  --secrets `
+    "TAAS-AUTH-TOKEN=$TAAS_TOKEN" `
+    "AUDIT-SECRET-KEY=$AUDIT_SECRET" `
+  --registry-server "$ACR_NAME.azurecr.io" `
+  --registry-username $ACR_NAME `
+  --registry-password $(az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv) `
+  --volume-mounts `
+    "name=sovereign-vault,storage-account=$STORAGE_ACCOUNT,share-name=$SHARE_NAME,mount-path=/workspace/03_Vault" `
+  --system-assigned `
+  --query "properties.configuration.ingress.fqdn" -o tsv
+
+# 7. (Optional) Add the Key Vault reference for managed identity (production best practice)
+# az containerapp identity assign --name $APP_NAME --resource-group $RG --system-assigned
+# az keyvault set-policy --name $VAULT_NAME --resource-group $RG --object-id <identity-principal-id> --secret-permissions get
+
+echo ""
+echo "================================================================================"
+echo "Deployment complete (if above succeeded)."
+echo "The node will ONLY start if the strict bootstrap was run before image build."
+echo "Visit the FQDN shown above on port 8000 for the retro deterministic dashboard."
+echo "================================================================================"

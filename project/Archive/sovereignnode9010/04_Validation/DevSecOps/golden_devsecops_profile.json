@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "profile_version": "1.0.0",
+    "sovereign_node_version": "3.9.1",
+    "generated": "2026-05-30",
+    "description": "Golden Recommended DevSecOps Workstation Profile for Sovereign Node 9010. Any delta against live Discover-SystemState.json must be submitted as DEVSECOPS_DRIFT through the Tau-gated engine for immutable audit sealing.",
+    "source": "Professional Research Findings & Confirmed Configuration Guide (30 May 2026) + Sovereign Node 9010 v3.9.1"
+  },
+  "recommended": {
+    "PowerPlan": "Best performance",
+    "FastStartup": false,
+    "LongPaths": true,
+    "DeveloperMode": true,
+    "WSL_DefaultVersion": 2,
+    "WSL_Memory": "16GB",
+    "WSL_Processors": 8,
+    "Git_autocrlf": "true",
+    "Git_safecrlf": "warn",
+    "Telemetry": 0,
+    "DiagTrack": "Disabled",
+    "Python_Source": "Official / Custom (not Microsoft Store)",
+    "MSI_PerformanceOptimizer": "High Performance (when on AC)",
+    "PowerAdapter": "150W genuine"
+  },
+  "drift_thresholds": {
+    "critical": ["PowerPlan", "WSL_Memory", "WSL_Processors", "Telemetry", "DiagTrack", "FastStartup"],
+    "high": ["LongPaths", "DeveloperMode", "WSL_DefaultVersion", "Git_autocrlf"],
+    "medium": ["Python_Source", "MSI_PerformanceOptimizer"]
+  },
+  "tau_policy": {
+    "model": "90/10 TAU GRACE BOW-OUT",
+    "grace_window": 0.90,
+    "bow_out_ceiling": 0.10,
+    "max_allowed_drift_severity": "MEDIUM",
+    "require_tau_refusal_on_critical": true,
+    "auto_affidavit_on_bow_out": true,
+    "notes": "90/10 Tau Grace Bow-Out is the explicit policy (user decision). Workstation drift is converted to a normalized Tau extraction ratio. While under 10% some grace exists. At or above 10% the system MUST BOW OUT: automatic Section 177 affidavit (with embedded fact_uuid) + hard pipeline failure. This failure is the saving grace. Fully inside TAU."
+  }
+}
