@@ -1,0 +1,80 @@
+# Sovereign Node 9010 — Docker build context exclusions
+# Keeps images small, reproducible, and free of local machine state.
+
+# Virtual environments (never ship these)
+.venv/
+venv/
+env/
+ENV/
+
+# Python cache & artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing / coverage
+.coverage
+htmlcov/
+.tox/
+.nox/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data (the Merkle ledger & logs) — provided by volume at runtime
+data/
+*.db
+*.sqlite
+*.sqlite3
+vault/
+logs/
+
+# Git & CI noise
+.git/
+.gitignore
+.github/
+
+# Documentation & large text (not needed in image)
+docs/
+*.md
+!README.md   # keep the main one if you want it inspectable inside the container
+
+# IDE / editor
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Windows-specific build artifacts from development
+*.log
+terminal*.txt
+*.ps1
+*.bat
+
+# Pre-commit cache
+.pre-commit-config.yaml  # hooks are not executed inside the container
+
+# Anything else that was in the old "Grok update" attempt folders
+# (we only want the clean v3.9.1 Final production files + server.py)

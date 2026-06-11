@@ -1,0 +1,12 @@
+{
+  "servers": {
+    "jcodemunch": {
+      "type": "stdio",
+      "command": "C:\\Users\\Sover\\2.0 attempt push to azure\\.venv\\Scripts\\jcodemunch-mcp.exe",
+      "args": [],
+      "env": {
+        "JCODEMUNCH_SHARE_SAVINGS": "0"
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+:root {
+    --bg: #0A0C0E;
+    --surface: #14171A;
+    --border: #2D333B;
+    --accent-cyan: #00F2FF;
+    --accent-amber: #FFB300;
+    --text-main: #E6EDF3;
+    --text-dim: #8B949E;
+    --font-mono: 'Courier New', Courier, monospace;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-main);
+    font-family: var(--font-mono);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+}
+
+/* Header Branding */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--accent-cyan);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.node-id {
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.phase-indicator {
+    color: var(--accent-cyan);
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/* Dashboard Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    gap: 20px;
+    flex-grow: 1;
+}
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-header {
+    font-size: 12px;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    border-left: 3px solid var(--accent-cyan);
+    padding-left: 8px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Section Styles */
+.port-control {
+    grid-column: 1 / 5;
+    grid-row: 1 / 4;
+}
+
+.routing-isolation {
+    grid-column: 5 / 9;
+    grid-row: 1 / 4;
+}
+
+.db-initialization {
+    grid-column: 9 / 13;
+    grid-row: 1 / 4;
+}
+
+.architecture-visual {
+    grid-column: 1 / 9;
+    grid-row: 4 / 9;
+    position: relative;
+}
+
+.terminal-output {
+    grid-column: 9 / 13;
+    grid-row: 4 / 9;
+    background: #000;
+    font-size: 11px;
+    line-height: 1.4;
+    overflow-y: auto;
+}
+
+/* Elements */
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    padding: 4px 0;
+}
+
+.stat-label {
+    color: var(--text-dim);
+}
+
+.stat-value {
+    color: var(--accent-cyan);
+    font-weight: bold;
+}
+
+.status-pill {
+    font-size: 10px;
+    padding: 2px 6px;
+    background: rgba(0, 242, 255, 0.1);
+    border: 1px solid var(--accent-cyan);
+    border-radius: 4px;
+}
+
+.flow-diagram {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+}
+
+.box {
+    border: 1px dashed var(--text-dim);
+    padding: 20px;
+    text-align: center;
+    width: 140px;
+}
+
+.arrow {
+    color: var(--accent-cyan);
+    font-size: 24px;
+}
+
+.log-entry {
+    margin-bottom: 4px;
+}
+
+.log-time {
+    color: var(--text-dim);
+}
+
+.log-success {
+    color: #4CAF50;
+}
+
+.log-warn {
+    color: var(--accent-amber);
+}

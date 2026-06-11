@@ -1,0 +1,23 @@
+2026-05-30 13:18:46 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:18:46 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-30 13:18:46 | INFO     | GrokNetCoreV391 | [2026-05-30 03:48:46.548141+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-30 13:18:49 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:18:49 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-30 13:18:49 | INFO     | GrokNetCoreV391 | [2026-05-30 03:48:49.783215+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-30 13:18:52 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:18:52 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-30 13:18:55 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:18:55 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-30 13:18:55 | INFO     | GrokNetCoreV391 | [2026-05-30 03:48:55.043463+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-30 13:18:55 | INFO     | GrokNetCoreV391 | [GROKNET CORE v3.9.1] GO | Within limits — proceed (deception score acceptable)
+2026-05-30 13:24:31 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:24:31 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-30 13:24:31 | INFO     | SovereignNodeServer | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:24:31 | INFO     | GrokNetCoreV391 | [2026-05-30 03:54:31.091049+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-30 13:24:31 | INFO     | SovereignNodeServer | [SOVEREIGN_NODE_9010_v3.9.1] GrokNetCore initialized (deterministic mode, black_box=False)
+2026-05-30 13:24:49 | INFO     | GrokNetCoreV391 | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:24:49 | WARNING  | GrokNetCoreV391 | Running in standalone mode: No module named 'numpy'
+2026-05-30 13:24:49 | INFO     | SovereignNodeServer | Logging initialized → C:\project\sovereignnode9010\data\logs\sovereign_node_20260530.log
+2026-05-30 13:24:49 | INFO     | GrokNetCoreV391 | [2026-05-30 03:54:49.398139+00:00] Sovereign Node 9010 ValueForge GrokNet v3.9.1 initialized — Four-Gate Model active.
+2026-05-30 13:24:49 | INFO     | SovereignNodeServer | [SOVEREIGN_NODE_9010_v3.9.1] GrokNetCore initialized (deterministic mode, black_box=False)
+2026-05-30 13:24:49 | INFO     | GrokNetCoreV391 | [GROKNET CORE v3.9.1] GO | Within limits — proceed (deception score acceptable)

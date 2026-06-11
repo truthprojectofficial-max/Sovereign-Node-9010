@@ -1,0 +1,5 @@
+{
+  "name": "Sovereign Node 9010",
+  "description": "Sovereign Standalone Node 9010. Truth as a Service (TaaS) platform implementing the BBFB Engine, Deception Scanner, and Merkle-sealed Facts Registry. Transitioning to standalone executable to eliminate browser metabolic debt.",
+  "requestFramePermissions": []
+}

@@ -1,0 +1,5 @@
+# Before any changes
+.\Discover-SystemState.ps1 -OutputPath "C:\SovereignNode\Discovery" -IncludeBenchmarks
+
+# After changes
+.\Discover-SystemState.ps1 -OutputPath "C:\SovereignNode\Discovery"

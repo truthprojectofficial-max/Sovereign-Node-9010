@@ -1,0 +1,45 @@
+[tool.ruff]
+# Strict PEP 8 + modern Python enforcement
+line-length = 120  # Permanent standard for Sovereign Node 9010 (long rule conditions + test cases)
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",      # pycodestyle errors
+    "F",      # pyflakes
+    "I",      # isort
+    "UP",     # pyupgrade
+    "B",      # flake8-bugbear
+    "C4",     # flake8-comprehensions
+    "SIM",    # flake8-simplify
+    "ARG",    # unused arguments
+    "PTH",    # pathlib instead of os.path
+    "RET",    # return value consistency
+    "SLF",    # private member access
+    "TCH",    # type checking imports
+]
+
+# Auto-fixable rules
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+# Additional strict options (from code review)
+disallow_untyped_calls = true
+disallow_untyped_decorators = true
+no_implicit_optional = true
+warn_redundant_casts = true
+warn_unused_ignores = true

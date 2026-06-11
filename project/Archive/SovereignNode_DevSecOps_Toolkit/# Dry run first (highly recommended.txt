@@ -1,0 +1,5 @@
+# Dry run first (highly recommended)
+.\Apply-DevEnvConfig.ps1 -WhatIf
+
+# Apply
+.\Apply-DevEnvConfig.ps1 -LogPath "C:\SovereignNode\Logs"

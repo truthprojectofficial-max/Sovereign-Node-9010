@@ -1,0 +1,10 @@
+[2026-05-30 13:52:21] [WARN] EXISTS : 00_Strategy
+[2026-05-30 13:52:21] [WARN] EXISTS : 01_Methodology
+[2026-05-30 13:52:21] [WARN] EXISTS : 02_Technical
+[2026-05-30 13:52:21] [WARN] EXISTS : 03_Vault
+[2026-05-30 13:52:21] [WARN] EXISTS : 04_Validation
+[2026-05-30 13:52:21] [WARN] EXISTS : 99_Archive
+[2026-05-30 13:52:21] [INFO] Initialized law.json (BBFB thresholds)
+[2026-05-30 13:52:21] [INFO] Initialized empty tamper-evident facts_registry.json
+[2026-05-30 13:52:21] [INFO] Python active: Python 3.11.9
+[2026-05-30 13:52:21] [INFO] Bootstrap complete. See C:\project\sovereignnode9010\04_Validation\STRICT_BOOTSTRAP_COMPLETE_20260530_135221.md

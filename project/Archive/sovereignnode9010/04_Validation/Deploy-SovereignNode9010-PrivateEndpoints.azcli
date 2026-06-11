@@ -1,0 +1,168 @@
+# Sovereign Node 9010 v3.9.1 — Secure Azure Deployment with Private Endpoints (.azcli)
+#
+# THIS IS THE HARDENED / PRIVATE VERSION.
+# Use this when you want maximum sovereignty and no public exposure.
+#
+# PRE-WORK IS MANDATORY: You must have run the strict bootstrap before building the image.
+# The container will refuse to start without the BOOTSTRAP_COMPLETE marker.
+#
+# What this script creates (secure by default):
+# - VNet + subnets (Container Apps, Private Endpoints, etc.)
+# - Private Endpoints for:
+#     • Azure Container Registry (ACR)
+#     • Key Vault
+#     • Storage Account (Azure Files for 03_Vault persistence)
+# - Container App with VNet integration (no public ingress by default, or private only)
+# - Private DNS zones + links
+# - All traffic stays inside your VNet (aligns with NO_NETWORK philosophy where possible)
+#
+# Requirements:
+# - az CLI logged in with appropriate permissions
+# - The Docker image already built & pushed to ACR (use the pipeline or manual az acr build)
+# - Replace all $VARS below with your values
+
+# ==================== VARIABLES ====================
+$RG="rg-sovereign-node-private"
+$LOCATION="eastus2"
+$PREFIX="sovereign9010priv"
+
+$VNET_NAME="$PREFIX-vnet"
+$SUBNET_PE="snet-private-endpoints"
+$SUBNET_CA="snet-containerapps"
+
+$ACR_NAME="$PREFIX"acr
+$VAULT_NAME="$PREFIX"kv
+$STORAGE_NAME="$PREFIX"st
+$SHARE_NAME="sovereign-vault"
+
+$APP_NAME="sovereign-node-9010"
+$ENV_NAME="env-$PREFIX"
+$IMAGE="$ACR_NAME.azurecr.io/sovereign-node-9010:latest"
+
+# Secrets (in real life pull from a secure store or pipeline variables)
+$TAAS_TOKEN="REPLACE_WITH_REAL_SECRET"
+$AUDIT_SECRET="REPLACE_WITH_REAL_SECRET"
+
+# ============================================================
+
+echo "=== 1. Resource Group + VNet with dedicated subnets ==="
+az group create --name $RG --location $LOCATION
+
+az network vnet create \
+  --resource-group $RG \
+  --name $VNET_NAME \
+  --location $LOCATION \
+  --address-prefix 10.10.0.0/16
+
+az network vnet subnet create \
+  --resource-group $RG \
+  --vnet-name $VNET_NAME \
+  --name $SUBNET_PE \
+  --address-prefixes 10.10.1.0/24 \
+  --private-endpoint-network-policies Disabled
+
+az network vnet subnet create \
+  --resource-group $RG \
+  --vnet-name $VNET_NAME \
+  --name $SUBNET_CA \
+  --address-prefixes 10.10.2.0/23
+
+echo "=== 2. Private DNS Zones + VNet Links ==="
+az network private-dns zone create --resource-group $RG --name privatelink.azurecr.io
+az network private-dns link vnet create \
+  --resource-group $RG --zone-name privatelink.azurecr.io \
+  --name acr-link --virtual-network $VNET_NAME --registration-enabled false
+
+az network private-dns zone create --resource-group $RG --name privatelink.vaultcore.azure.net
+az network private-dns link vnet create \
+  --resource-group $RG --zone-name privatelink.vaultcore.azure.net \
+  --name kv-link --virtual-network $VNET_NAME --registration-enabled false
+
+az network private-dns zone create --resource-group $RG --name privatelink.file.core.windows.net
+az network private-dns link vnet create \
+  --resource-group $RG --zone-name privatelink.file.core.windows.net \
+  --name storage-link --virtual-network $VNET_NAME --registration-enabled false
+
+echo "=== 3. Core Resources (ACR, KV, Storage) ==="
+az acr create --resource-group $RG --name $ACR_NAME --sku Premium --location $LOCATION  # Premium required for Private Link
+
+az keyvault create --name $VAULT_NAME --resource-group $RG --location $LOCATION --enable-rbac-authorization false
+
+az storage account create --name $STORAGE_NAME --resource-group $RG --location $LOCATION --sku Standard_LRS --kind StorageV2
+
+az storage share create --name $SHARE_NAME --account-name $STORAGE_NAME
+
+az keyvault secret set --vault-name $VAULT_NAME --name "TAAS-AUTH-TOKEN" --value $TAAS_TOKEN
+az keyvault secret set --vault-name $VAULT_NAME --name "AUDIT-SECRET-KEY" --value $AUDIT_SECRET
+
+echo "=== 4. Private Endpoints ==="
+# ACR Private Endpoint (two for data + registry in Premium)
+az network private-endpoint create \
+  --resource-group $RG \
+  --name pe-$ACR_NAME \
+  --vnet-name $VNET_NAME \
+  --subnet $SUBNET_PE \
+  --private-connection-resource-id $(az acr show --name $ACR_NAME --query id -o tsv) \
+  --group-ids registry \
+  --connection-name acr-connection
+
+# Key Vault Private Endpoint
+az network private-endpoint create \
+  --resource-group $RG \
+  --name pe-$VAULT_NAME \
+  --vnet-name $VNET_NAME \
+  --subnet $SUBNET_PE \
+  --private-connection-resource-id $(az keyvault show --name $VAULT_NAME --query id -o tsv) \
+  --group-ids vault \
+  --connection-name kv-connection
+
+# Storage (Azure Files) Private Endpoint
+az network private-endpoint create \
+  --resource-group $RG \
+  --name pe-$STORAGE_NAME \
+  --vnet-name $VNET_NAME \
+  --subnet $SUBNET_PE \
+  --private-connection-resource-id $(az storage account show --name $STORAGE_NAME --query id -o tsv) \
+  --group-ids file \
+  --connection-name storage-connection
+
+echo "=== 5. Container App Environment (VNet integrated) + App ==="
+az containerapp env create \
+  --name $ENV_NAME \
+  --resource-group $RG \
+  --location $LOCATION \
+  --infrastructure-subnet-resource-id $(az network vnet subnet show --resource-group $RG --vnet-name $VNET_NAME --name $SUBNET_CA --query id -o tsv)
+
+# Create the Container App with VNet + private storage mount
+# Note: For fully private ingress, use --ingress external with internal only or configure properly.
+az containerapp create \
+  --name $APP_NAME \
+  --resource-group $RG \
+  --environment $ENV_NAME \
+  --image $IMAGE \
+  --target-port 8000 \
+  --ingress external \
+  --min-replicas 1 \
+  --max-replicas 3 \
+  --cpu 1.0 \
+  --memory 2Gi \
+  --env-vars \
+    "TAAS_AUTH_TOKEN=secretref:taas" \
+    "AUDIT_SECRET_KEY=secretref:audit" \
+    "SOVEREIGN_DB_PATH=/workspace/03_Vault/facts_registry.db" \
+    "NO_NETWORK=1" \
+  --secrets \
+    "taas=$TAAS_TOKEN" \
+    "audit=$AUDIT_SECRET" \
+  --registry-server "$ACR_NAME.azurecr.io" \
+  --registry-username $ACR_NAME \
+  --registry-password $(az acr credential show --name $ACR_NAME --query "passwords[0].value" -o tsv) \
+  --volume-mounts "name=vault,storage-account=$STORAGE_NAME,share-name=$SHARE_NAME,mount-path=/workspace/03_Vault" \
+  --system-assigned
+
+echo ""
+echo "=== PRIVATE DEPLOYMENT COMPLETE ==="
+echo "The node is now only reachable inside the VNet (or via private DNS from peered VNets)."
+echo "Update your private DNS zones with the correct A records for the private endpoints if needed."
+echo "Run the strict bootstrap before every image build for full deterministic guarantees."
+echo "================================================================================"

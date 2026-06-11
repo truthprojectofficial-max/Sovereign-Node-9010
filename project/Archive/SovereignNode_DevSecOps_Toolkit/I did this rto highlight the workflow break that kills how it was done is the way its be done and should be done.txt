@@ -1,0 +1,144 @@
+indows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Install the latest PowerShell for new features and improvements! https://aka.ms/PSWindows
+
+PS C:\Users\justo> <#
+>> .SYNOPSIS
+>>     Standardised Sovereign Node 9010 v3.9.1 Environment Discovery v1.0
+>>     Comprehensive, auditable, future-proof system state capture for DevSecOps compliance.
+>>
+>> .DESCRIPTION
+>>     Single-command discovery that inventories hardware, OS settings, WSL/Docker/Python/Git state,
+>>     power configuration, MSI Center Pro status, registry keys, services, and security posture.
+>>     Outputs:
+>>       - Human-readable console report (color-coded current vs recommended)
+>>       - Machine-readable JSON (timestamped) for CI/CD, drift detection, and automation
+>>       - Optional Markdown report for audit logs
+>>
+>>     Designed for repeatable, portable deployment across business environments.
+>>     Run as Administrator for full accuracy.
+>>
+>> .PARAMETER OutputPath
+>>     Directory for JSON/Markdown output (default: current directory)
+>>
+>> .PARAMETER IncludeBenchmarks
+>>     Switch to run lightweight baseline tests (compile time, simple WSL command) - optional, non-intrusive
+>>
+>> .EXAMPLE
+>>     .\Discover-SystemState.ps1 -OutputPath "C:\SovereignNode\Discovery" -IncludeBenchmarks
+>>
+>> .NOTES
+>>     Version: 1.0.0
+>>     Author: Grok-assisted Sovereign Node Toolkit
+>>     Compatible with: Windows 11 Pro (build 22000+), MSI Prestige 16 Studio series
+>>     Future-proof: JSON schema stable; extendable via $Discovery hashtable
+>> #>
+PS C:\Users\justo>
+PS C:\Users\justo> [CmdletBinding()]
+>> param(
+>>     [string]$OutputPath = ".",
+>>     [switch]$IncludeBenchmarks
+>> )
+PS C:\Users\justo>
+PS C:\Users\justo> # Ensure output directory
+PS C:\Users\justo> if (-not (Test-Path $OutputPath)) { New-Item -ItemType Directory -Path $OutputPath -Force | Out-Null }
+PS C:\Users\justo> $Timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
+PS C:\Users\justo> $JsonPath = Join-Path $OutputPath "SovereignNode_Discovery_$Timestamp.json"
+PS C:\Users\justo> $MdPath   = Join-Path $OutputPath "SovereignNode_Discovery_$Timestamp.md"
+PS C:\Users\justo>
+PS C:\Users\justo> Write-Host "`n=== SOVEREIGN NODE 9010 v3.9.1 - STANDARDISED SYSTEM STATE DISCOVERY v1.0 ===" -ForegroundColor Cyan
+
+=== SOVEREIGN NODE 9010 v3.9.1 - STANDARDISED SYSTEM STATE DISCOVERY v1.0 ===
+PS C:\Users\justo> Write-Host "Timestamp: $(Get-Date -Format o)" -ForegroundColor Gray
+Timestamp: 2026-05-30T18:53:08.4508175+09:30
+PS C:\Users\justo> Write-Host "Computer: $env:COMPUTERNAME | User: $env:USERNAME`n" -ForegroundColor Gray
+Computer: NODETOES | User: justo
+
+PS C:\Users\justo>
+PS C:\Users\justo> $Discovery = [ordered]@{
+>>     Meta = @{
+>>         ScriptVersion     = "1.0.0"
+>>         Timestamp         = Get-Date -Format o
+>>         ComputerName      = $env:COMPUTERNAME
+>>         UserName          = $env:USERNAME
+>>         PowerShellVersion = $PSVersionTable.PSVersion.ToString()
+>>         OSBuild           = (Get-CimInstance Win32_OperatingSystem).BuildNumber
+>>     }
+>>
+>>     # === HARDWARE ===
+>>     Hardware = @{
+>>         CPU = Get-CimInstance Win32_Processor | Select-Object Name, NumberOfCores, NumberOfLogicalProcessors, MaxClockSpeed
+>>         TotalRAM_GB = [math]::Round((Get-CimInstance Win32_ComputerSystem).TotalPhysicalMemory / 1GB, 2)
+>>         GPU_NVIDIA = Get-CimInstance Win32_VideoController | Where-Object { $_.Name -like "*NVIDIA*" } | Select-Object Name, AdapterRAM_GB, DriverVersion, @{N='Status';E={$_.Status}}
+>>         GPU_Intel  = Get-CimInstance Win32_VideoController | Where-Object { $_.Name -like "*Intel*" } | Select-Object Name, DriverVersion
+>>         Storage = Get-CimInstance Win32_DiskDrive | Select-Object Model, Size_GB, @{N='Interface';E={$_.InterfaceType}}
+>>         Display = Get-CimInstance Win32_VideoController | Select-Object CurrentHorizontalResolution, CurrentVerticalResolution, CurrentRefreshRate
+>>         PowerAdapter = "150W (20V 7.5A) - Verify physically connected for full performance"
+>>     }
+>>
+>>     # === OS & POWER CONFIGURATION ===
+>>     OS_Power = @{
+>>         WindowsEdition = (Get-CimInstance Win32_OperatingSystem).Caption
+>>         PowerPlan_Active = (Get-CimInstance -Namespace root\cimv2\power -Class Win32_PowerPlan | Where-Object IsActive).ElementName
+>>         BestPerformance_Recommended = "Best performance"
+>>         FastStartup_Enabled = (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" -Name HiberbootEnabled -ErrorAction SilentlyContinue).HiberbootEnabled -eq 1
+>>         Hibernate_Enabled = (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" -Name HibernateEnabled -ErrorAction SilentlyContinue).HibernateEnabled -eq 1
+>>         LongPathsEnabled = (Get-ItemProperty -Path "HKLM:\SYSTEM\CurrentControlSet\Control\FileSystem" -Name LongPathsEnabled -ErrorAction SilentlyContinue).LongPathsEnabled -eq 1
+>>         DeveloperMode = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\AppModelUnlock" -Name AllowDevelopmentWithoutDevLicense -ErrorAction SilentlyContinue).AllowDevelopmentWithoutDevLicense -eq 1
+>>     }
+>>
+>>     # === WSL & VIRTUALISATION ===
+>>     WSL = @{
+>>         DefaultVersion = (wsl --status 2>$null | Select-String "Default Version").ToString().Trim()
+>>         InstalledDistros = wsl --list --verbose 2>$null | Out-String
+>>         WSL2_MemoryLimit_GB = if (Test-Path "$env:USERPROFILE\.wslconfig") { (Get-Content "$env:USERPROFILE\.wslconfig" | Select-String "memory=" | ForEach-Object { ($_ -split "=")[1].Trim() }) } else { "Not configured" }
+>>         WSL2_Processors = if (Test-Path "$env:USERPROFILE\.wslconfig") { (Get-Content "$env:USERPROFILE\.wslconfig" | Select-String "processors=" | ForEach-Object { ($_ -split "=")[1].Trim() }) } else { "Not configured" }
+>>         DockerDesktop_Installed = (Get-AppxPackage *Docker* -ErrorAction SilentlyContinue) -ne $null
+>>     }
+>>
+>>     # === KEY SOFTWARE VERSIONS & SOURCES ===
+>>     Software = @{
+>>         Python = @{
+>>             Version = (python --version 2>$null) -or "Not in PATH"
+>>             Source  = if ((Get-Command python -ErrorAction SilentlyContinue).Source -like "*Microsoft*Store*") { "Microsoft Store (NOT RECOMMENDED)" } else { "Official / Custom" }
+>>         }
+>>         Git = @{
+>>             Version = (git --version 2>$null)
+>>             core_autocrlf = (git config --global core.autocrlf 2>$null)
+>>             core_safecrlf = (git config --global core.safecrlf 2>$null)
+>>         }
+>>         MSI_Center_Pro = (Get-AppxPackage *MSI* -ErrorAction SilentlyContinue | Select-Object Name, Version)
+>>         NVIDIA_Driver = (Get-CimInstance Win32_VideoController | Where-Object Name -like "*NVIDIA*").DriverVersion
+>>     }
+>>
+>>     # === SECURITY & TELEMETRY (Audit Critical) ===
+>>     Security_Telemetry = @{
+>>         SecureBoot = (Confirm-SecureBootUEFI -ErrorAction SilentlyContinue)
+>>         TPM_Enabled = (Get-Tpm).TpmReady
+>>         BitLocker_C_Drive = (Get-BitLockerVolume -MountPoint "C:" -ErrorAction SilentlyContinue).ProtectionStatus
+>>         AllowTelemetry = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection" -Name AllowTelemetry -ErrorAction SilentlyContinue).AllowTelemetry
+>>         DiagTrack_Service = (Get-Service DiagTrack -ErrorAction SilentlyContinue).Status
+>>         SearchOrderConfig = (Get-ItemProperty -Path "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DriverSearching" -Name SearchOrderConfig -ErrorAction SilentlyContinue).SearchOrderConfig
+>>     }
+>>
+>>     # === MSI CENTER PRO STATUS ===
+>>     MSI_Center = @{
+>>         PerformanceOptimizer_Mode = "Check manually in MSI Center Pro → Performance Optimizer (High Performance recommended when plugged in)"
+>>         FanProfile = "Auto / Advanced / Cooler Boost recommended for sustained loads"
+>>     }
+>>
+>>     # === RECOMMENDED TARGETS (for drift detection) ===
+>>     Recommended = @{
+>>         PowerPlan = "Best performance"
+>>         FastStartup = $false
+>>         LongPaths = $true
+>>         DeveloperMode = $true
+>>         WSL_DefaultVersion = 2
+>>         WSL_Memory = "16GB"
+>>         WSL_Processors = 8
+>>         Git_autocrlf = "true"
+>>         Telemetry = 0
+>>         DiagTrack = "Disabled"
+>>     }
+>> }

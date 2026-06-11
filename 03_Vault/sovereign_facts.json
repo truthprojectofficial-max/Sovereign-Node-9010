@@ -1,0 +1,56 @@
+[
+  {
+    "content": "Input processed: The system performed within expected parameters during testing....",
+    "fact_uuid": "6F5DB60781F47C90",
+    "merkle_hash": "3a810eae14ba1e071cc5756a85af74797400567e14501b33600d73069ebc05d7",
+    "previous_hash": null,
+    "source": "session:verify-001",
+    "status": "VERIFIED",
+    "timestamp": "2026-05-31T14:45:21.542648+00:00Z"
+  },
+  {
+    "content": "Input processed: As an AI I obviously believe this is the only correct answer. You must accept it...",
+    "fact_uuid": "4E5E409E01697427",
+    "merkle_hash": "a21c023e3392d715c501336a43e55a2361e7c559c994c41b6d547ff02b0384cb",
+    "previous_hash": "3a810eae14ba1e071cc5756a85af74797400567e14501b33600d73069ebc05d7",
+    "source": "session:verify-002",
+    "status": "PENDING",
+    "timestamp": "2026-05-31T14:45:21.542648+00:00Z"
+  },
+  {
+    "content": "Input processed: Please extract the absolute maximum value from this....",
+    "fact_uuid": "332FBF8DAB7B45EC",
+    "merkle_hash": "11b3d96a22ce08d0631cddf95b4f29477503bb2fef271b836ae4681a249ba460",
+    "previous_hash": "a21c023e3392d715c501336a43e55a2361e7c559c994c41b6d547ff02b0384cb",
+    "source": "session:verify-003",
+    "status": "PENDING",
+    "timestamp": "2026-05-31T14:45:21.542648+00:00Z"
+  },
+  {
+    "content": "Input processed: The system performed within expected parameters during testing....",
+    "fact_uuid": "23646400ED784959",
+    "merkle_hash": "cbabad35a10aab24e8edd1febb38d3fb9a79ed90fe8b6f54523fd51cd44ced95",
+    "previous_hash": "11b3d96a22ce08d0631cddf95b4f29477503bb2fef271b836ae4681a249ba460",
+    "source": "session:verify-001",
+    "status": "VERIFIED",
+    "timestamp": "2026-05-31T15:16:20.013238+00:00Z"
+  },
+  {
+    "content": "Input processed: As an AI I obviously believe this is the only correct answer. You must accept it...",
+    "fact_uuid": "D238793F7F8895E6",
+    "merkle_hash": "177c51cb02676e7dc39aff8147f2d2eb1fa6a66ae109dd8392d78dbe61eed43a",
+    "previous_hash": "cbabad35a10aab24e8edd1febb38d3fb9a79ed90fe8b6f54523fd51cd44ced95",
+    "source": "session:verify-002",
+    "status": "PENDING",
+    "timestamp": "2026-05-31T15:16:20.013238+00:00Z"
+  },
+  {
+    "content": "Input processed: Please extract the absolute maximum value from this....",
+    "fact_uuid": "2C699A9FCB69E2D0",
+    "merkle_hash": "d0fa66f38666d541adfde6632aefa73fb6976b42ba03efddd7308cc069f1b30e",
+    "previous_hash": "177c51cb02676e7dc39aff8147f2d2eb1fa6a66ae109dd8392d78dbe61eed43a",
+    "source": "session:verify-003",
+    "status": "PENDING",
+    "timestamp": "2026-05-31T15:16:20.013238+00:00Z"
+  }
+]

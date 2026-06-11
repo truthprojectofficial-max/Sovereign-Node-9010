@@ -1,0 +1,11 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "type": "command",
+        "windows": "powershell -NoProfile -Command \"if ($env:TOOL_NAME -eq 'run_in_terminal' -and $env:TOOL_INPUT -match 'git commit') { Write-Output '{\\\"hookSpecificOutput\\\":{\\\"hookEventName\\\":\\\"PreToolUse\\\",\\\"permissionDecision\\\":\\\"ask\\\",\\\"permissionDecisionReason\\\":\\\"Run @deterministic lint check before committing\\\"}}' } else { Write-Output '{\\\"continue\\\":true}' }\"",
+        "timeout": 10
+      }
+    ]
+  }
+}

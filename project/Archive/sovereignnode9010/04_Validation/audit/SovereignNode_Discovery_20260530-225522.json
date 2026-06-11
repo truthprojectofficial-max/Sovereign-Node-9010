@@ -1,0 +1,109 @@
+﻿{
+    "Meta":  {
+                 "ScriptVersion":  "1.0.0",
+                 "Timestamp":  "2026-05-30T22:55:22.4999016+09:30",
+                 "OSBuild":  "26200",
+                 "UserName":  "justo",
+                 "ComputerName":  "NODETOES",
+                 "PowerShellVersion":  "5.1.26100.8521"
+             },
+    "Hardware":  {
+                     "Storage":  [
+                                     {
+                                         "Model":  " USB  SanDisk 3.2Gen1 SCSI Disk Device",
+                                         "Size_GB":  null,
+                                         "Interface":  "SCSI"
+                                     },
+                                     {
+                                         "Model":  "NVMe CT2000T500SSD8",
+                                         "Size_GB":  null,
+                                         "Interface":  "SCSI"
+                                     }
+                                 ],
+                     "PowerAdapter":  "150W (20V 7.5A) - Verify physically connected for full performance",
+                     "TotalRAM_GB":  31.71,
+                     "Display":  [
+                                     {
+                                         "CurrentHorizontalResolution":  2560,
+                                         "CurrentVerticalResolution":  1600,
+                                         "CurrentRefreshRate":  165
+                                     },
+                                     {
+                                         "CurrentHorizontalResolution":  null,
+                                         "CurrentVerticalResolution":  null,
+                                         "CurrentRefreshRate":  null
+                                     }
+                                 ],
+                     "GPU_Intel":  {
+                                       "Name":  "Intel(R) Iris(R) Xe Graphics",
+                                       "DriverVersion":  "31.0.101.4032"
+                                   },
+                     "GPU_NVIDIA":  {
+                                        "Name":  "NVIDIA GeForce RTX 4060 Laptop GPU",
+                                        "AdapterRAM_GB":  null,
+                                        "DriverVersion":  "32.0.15.9636",
+                                        "Status":  "OK"
+                                    },
+                     "CPU":  {
+                                 "Name":  "13th Gen Intel(R) Core(TM) i7-13700H",
+                                 "NumberOfCores":  14,
+                                 "NumberOfLogicalProcessors":  20,
+                                 "MaxClockSpeed":  2400
+                             }
+                 },
+    "OS_Power":  {
+                     "DeveloperMode":  true,
+                     "BestPerformance_Recommended":  "Best performance",
+                     "FastStartup_Enabled":  true,
+                     "LongPathsEnabled":  true,
+                     "WindowsEdition":  "Microsoft Windows 11 Pro",
+                     "PowerPlan_Active":  "High performance",
+                     "Hibernate_Enabled":  false
+                 },
+    "WSL":  {
+                "InstalledDistros":  "W\u0000i\u0000n\u0000d\u0000o\u0000w\u0000s\u0000 \u0000S\u0000u\u0000b\u0000s\u0000y\u0000s\u0000t\u0000e\u0000m\u0000 \u0000f\u0000o\u0000r\u0000 \u0000L\u0000i\u0000n\u0000u\u0000x\u0000 \u0000h\u0000a\u0000s\u0000 \u0000n\u0000o\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000e\u0000d\u0000 \u0000d\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000t\u0000i\u0000o\u0000n\u0000s\u0000.\u0000\r\n\u0000\r\n\u0000Y\u0000o\u0000u\u0000 \u0000c\u0000a\u0000n\u0000 \u0000r\u0000e\u0000s\u0000o\u0000l\u0000v\u0000e\u0000 \u0000t\u0000h\u0000i\u0000s\u0000 \u0000b\u0000y\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000i\u0000n\u0000g\u0000 \u0000a\u0000 \u0000d\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000t\u0000i\u0000o\u0000n\u0000 \u0000w\u0000i\u0000t\u0000h\u0000 \u0000t\u0000h\u0000e\u0000 \u0000i\u0000n\u0000s\u0000t\u0000r\u0000u\u0000c\u0000t\u0000i\u0000o\u0000n\u0000s\u0000 \u0000b\u0000e\u0000l\u0000o\u0000w\u0000:\u0000\r\n\u0000\r\n\u0000\r\n\u0000\r\n\u0000U\u0000s\u0000e\u0000 \u0000\u0027\u0000w\u0000s\u0000l\u0000.\u0000e\u0000x\u0000e\u0000 \u0000-\u0000-\u0000l\u0000i\u0000s\u0000t\u0000 \u0000-\u0000-\u0000o\u0000n\u0000l\u0000i\u0000n\u0000e\u0000\u0027\u0000 \u0000t\u0000o\u0000 \u0000l\u0000i\u0000s\u0000t\u0000 \u0000a\u0000v\u0000a\u0000i\u0000l\u0000a\u0000b\u0000l\u0000e\u0000 \u0000d\u0000i\u0000s\u0000t\u0000r\u0000i\u0000b\u0000u\u0000t\u0000i\u0000o\u0000n\u0000s\u0000\r\n\u0000\r\n\u0000a\u0000n\u0000d\u0000 \u0000\u0027\u0000w\u0000s\u0000l\u0000.\u0000e\u0000x\u0000e\u0000 \u0000-\u0000-\u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000 \u0000\u003c\u0000D\u0000i\u0000s\u0000t\u0000r\u0000o\u0000\u003e\u0000\u0027\u0000 \u0000t\u0000o\u0000 \u0000i\u0000n\u0000s\u0000t\u0000a\u0000l\u0000l\u0000.\u0000\r\n\u0000\r\n\u0000\r\n",
+                "WSL2_Processors":  "8",
+                "DockerDesktop_Installed":  false,
+                "WSL2_MemoryLimit_GB":  "16GB",
+                "DefaultVersion":  "Unavailable"
+            },
+    "Software":  {
+                     "Git":  {
+                                 "core_autocrlf":  "true",
+                                 "Version":  "git version 2.54.0.windows.1",
+                                 "core_safecrlf":  "warn"
+                             },
+                     "MSI_Center_Pro":  {
+
+                                        },
+                     "NVIDIA_Driver":  "32.0.15.9636",
+                     "Python":  {
+                                    "Version":  "Python 3.11.9",
+                                    "Source":  "Official / Custom"
+                                }
+                 },
+    "Security_Telemetry":  {
+                               "DiagTrack_Service":  1,
+                               "BitLocker_C_Drive":  1,
+                               "SearchOrderConfig":  null,
+                               "SecureBoot":  true,
+                               "AllowTelemetry":  0,
+                               "TPM_Enabled":  true
+                           },
+    "MSI_Center":  {
+                       "PerformanceOptimizer_Mode":  "Check manually in MSI Center Pro â†’ Performance Optimizer (High Performance recommended when plugged in)",
+                       "FanProfile":  "Auto / Advanced / Cooler Boost recommended for sustained loads"
+                   },
+    "Recommended":  {
+                        "DiagTrack":  "Disabled",
+                        "WSL_DefaultVersion":  2,
+                        "WSL_Processors":  8,
+                        "Git_autocrlf":  "true",
+                        "LongPaths":  true,
+                        "DeveloperMode":  true,
+                        "FastStartup":  false,
+                        "Telemetry":  0,
+                        "PowerPlan":  "Best performance",
+                        "WSL_Memory":  "16GB"
+                    }
+}
