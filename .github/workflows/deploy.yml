@@ -1,100 +1,28 @@
-# ============================================================================
-# CI/CD — Sovereign Node 9010 (Groknett ValueForge)
-# Triggers on push to main. Lints, typechecks, builds, pushes to ACR,
-# and deploys to Azure Container Apps.
-#
-# Required GitHub Secrets (Settings → Secrets → Actions):
-#   AZURE_CREDENTIALS   — JSON output of: az ad sp create-for-rbac --role Contributor --scopes /subscriptions/<sub-id>
-# ============================================================================
+FROM node:22-alpine AS builder
+WORKDIR /app
+COPY package.json package-lock.json* ./
+RUN npm ci
+COPY . .
+RUN npm run build
 
-name: Deploy ValueForge
+FROM node:22-alpine AS runner
+WORKDIR /app
+ENV NODE_ENV=production
+ENV PORT=8000
 
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:     # manual trigger from GitHub UI
+COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/node_modules ./node_modules
+COPY --from=builder /app/package.json ./
+COPY --from=builder /app/server.ts ./
+COPY --from=builder /app/src ./src
+COPY --from=builder /app/sql-js.d.ts ./
+COPY --from=builder /app/tsconfig.node.json ./
 
-env:
-  RESOURCE_GROUP: groknett-deploy
-  ACR_NAME: acrgroknettvaaoxk4iafo3kuo
-  APP_NAME: cagroknettvalueforgaoxk4iafo3kuo
-  IMAGE_NAME: groknett-valueforge
+RUN mkdir -p /app/data
 
-jobs:
-  validate:
-    name: Lint + Typecheck + Build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
+EXPOSE 8000
 
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          cache: npm
+HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
+  CMD wget -qO- http://localhost:8000/api/health || exit 1
 
-      - run: npm ci
-      - run: npm run lint
-      - run: npm run typecheck
-      - run: npm run build
-
-      - uses: actions/upload-artifact@v7
-        with:
-          name: dist
-          path: dist/
-          retention-days: 1
-
-  deploy:
-    name: Build Image + Deploy to Azure
-    needs: validate
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Azure Login
-        uses: azure/login@v3
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Check Azure subscription state
-        id: subscription
-        run: |
-          STATE=$(az account show --query "state" --output tsv)
-          echo "state=${STATE}" >> "$GITHUB_OUTPUT"
-          if [ "$STATE" != "Enabled" ]; then
-            echo "::warning::Azure subscription state is '${STATE}'. Skipping deploy steps. Please check Azure subscription status and billing settings."
-          fi
-
-      - name: Build & Push to ACR
-        if: steps.subscription.outputs.state == 'Enabled'
-        run: |
-          az acr build \
-            --registry ${{ env.ACR_NAME }} \
-            --image ${{ env.IMAGE_NAME }}:${{ github.sha }} \
-            --image ${{ env.IMAGE_NAME }}:latest \
-            --file Dockerfile .
-
-      - name: Deploy to Container Apps
-        if: steps.subscription.outputs.state == 'Enabled'
-        run: |
-          az containerapp update \
-            --name ${{ env.APP_NAME }} \
-            --resource-group ${{ env.RESOURCE_GROUP }} \
-            --image ${{ env.ACR_NAME }}.azurecr.io/${{ env.IMAGE_NAME }}:${{ github.sha }}
-
-      - name: Health Check
-        if: steps.subscription.outputs.state == 'Enabled'
-        run: |
-          FQDN=$(az containerapp show \
-            --name ${{ env.APP_NAME }} \
-            --resource-group ${{ env.RESOURCE_GROUP }} \
-            --query "properties.configuration.ingress.fqdn" \
-            --output tsv)
-          echo "Waiting for deployment to stabilize..."
-          sleep 30
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://${FQDN}/api/health")
-          if [ "$STATUS" = "200" ]; then
-            echo "Health check passed: https://${FQDN}/api/health → HTTP 200"
-          else
-            echo "Health check failed: HTTP ${STATUS}"
-            exit 1
-          fi
+CMD ["npx", "tsx", "server.ts"]
